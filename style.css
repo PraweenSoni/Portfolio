@@ -36,8 +36,8 @@ html {
 
 @media (prefers-color-scheme : light) {
  :root {
-  /* --main-colour: #4bbf87; */
-  --main-colour: hotpink;
+  --main-colour: #4bbf87;
+  /* --main-colour: hotpink; */
   --black: black;
   --white: white;
   --whitesmoke: whitesmoke;
@@ -46,6 +46,8 @@ html {
 
 @media (prefers-color-scheme : dark) {
  :root {
+  --main-colour: #4bbf87;
+  /* --main-colour: hotpink; */
   --white: black;
   --black: white;
   --whitesmoke: #2d2e2d;
@@ -190,7 +192,9 @@ main {
  width: 250px;
  margin-bottom: .5rem;
 }
-
+#box{
+ color: var(--black);
+}
 .down_mypic #contactbtn a {
  color: var(--white);
  font-size: 1.6rem;
@@ -223,6 +227,7 @@ section {
  text-align: center;
  padding: 2rem;
  font-size: 2rem;
+ color: var(--black);
 }
 #about .about_section {
  justify-content: space-between;
@@ -369,6 +374,7 @@ section {
  display: flex;
  align-items: center;
  justify-content: space-between;
+ color: var(--black);
 }
 
 .skill .skill-content .column-right .line {
