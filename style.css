@@ -17,7 +17,7 @@ html {
 }
 
 :root {
- --main-colour: #4bbf87;
+ /* --main-colour: #4bbf87; */
  --white: white;
  --black: black;
  --whitesmoke: whitesmoke;
@@ -36,7 +36,8 @@ html {
 
 @media (prefers-color-scheme : light) {
  :root {
-  --main-colour: #4bbf87;
+  /* --main-colour: #4bbf87; */
+  --main-colour: hotpink;
   --black: black;
   --white: white;
   --whitesmoke: whitesmoke;
@@ -147,7 +148,7 @@ main {
 .img_box .down_mypic {
  position: relative;
  font-size: 2rem;
- top: 12rem;
+ top: 14rem;
  flex-direction: column;
 }
 
@@ -299,19 +300,20 @@ section {
 }
 
 .project_img{
- border: 1px solid gray;
  height: 80%;
- width: 95%;
- margin: 0 2.5%;
+ width: 100%;
 }
 .project_img img{
  height: 100%;
- width: 100%;
+ width: 80%;
  overflow: hidden;
 }
 .project_discription p{
  text-align: center;
  font-size: 1.4rem;
+}
+.a_color{
+ color: var(--black);
 }
 .service_div .Small_div a{
  font-size: 2rem;
@@ -346,6 +348,7 @@ section {
 .css-c:hover,
 .html-c:hover {
  box-shadow: 0 0 2rem 1rem var(--main-colour);
+ transform: scale(1.18);
  /*  box-shadow: 0 0 2rem 1rem rgba(25, 227, 150, 0.3); */
 }
 
@@ -385,7 +388,7 @@ section {
 }
 
 .skill .skill-content .column-right .html::before {
- width: 80%;
+ width: 90%;
 }
 
 .skill .skill-content .column-right .css::before {
@@ -401,7 +404,7 @@ section {
 }
 
 .skill .skill-content .column-right .sql::before {
- width: 10%;
+ width: 20%;
 }
 
 .skill .skill-content .column-right .cpp::before {
@@ -465,7 +468,7 @@ section {
 
 .container-2 .contactinfo .box {
  position: relative;
- padding: 2rem 0;
+ padding-bottom: 1rem;
 }
 
 .container-2 .contactinfo .box .text {
@@ -493,6 +496,7 @@ section {
  font-size: 1.5rem;
  color: var(--black);
  font-weight: 500;
+ margin-bottom: 1rem;
 }
 
 .contactform .inputbox {
@@ -561,7 +565,7 @@ textarea {
  border-bottom-color: var(--black);
 }
 footer big{
- color: var(--black);
+ color: var(--main-colour);
 }
 footer p{
  color: var(--black);

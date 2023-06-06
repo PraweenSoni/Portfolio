@@ -35,6 +35,12 @@ setInterval(() => {
   wait = 8, i = j = 0;
 }, 50);
 
+function resume(){
+ alert("Resume not uploaded yet.");
+}
+function contact(){
+ alert("Error!! Please Click on email and connect with us.");
+}
 document.querySelector("#click").onclick = scroll
 let CopyRigthYear = document.getElementById('year');
 CopyRigthYear.textContent = new Date().getFullYear();
