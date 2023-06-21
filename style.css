@@ -289,6 +289,38 @@ section {
  background-color: var(--main-colour);
 }
 
+/* resume button code */
+
+.text-1,
+.text-2 {
+ margin-top: 10px;
+ position: absolute;
+ width: 100px;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* transform-origin: 50% 50% -25px; */
+ transition: all 0.3s;
+}
+
+.text-1 {
+ transform: rotateX(0deg);
+ background-color: #292929;
+ color: #fff;
+}
+
+.text-2 {
+ transform: rotateX(90deg);
+ /* background-color: #eee; */
+ background-color: var(--main-colour);
+ color: #131313;
+}
+
+.btn:hover .text-2 {
+ transform: rotateX(0deg);
+}
+
 /* Service section code */
 .service_div {
  height: 45rem;
@@ -484,6 +516,10 @@ section {
  color: var(--black);
  flex-direction: column;
  font-weight: 300;
+}
+.container-2 .contactinfo .box .text .links a{
+ font-size: 20px;
+ color: var(--black);
 }
 
 .container-2 .contactinfo .box .text h3 {
