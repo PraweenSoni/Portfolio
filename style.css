@@ -36,11 +36,6 @@ html {
  transition: opacity .25s, visibility 1s;
 }
 
-.fade {
- opacity: 0;
- visibility: hidden;
-}
-
 .wrapper {
  position: relative;
  line-height: 50px;
@@ -55,7 +50,6 @@ html {
 .text {
  color: transparent;
  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
- cursor: pointer;
 }
 
 .text-hover {
@@ -66,14 +60,25 @@ html {
  border-right: 6px solid var(--main-colour);
  transition: 5s ease;
  user-select: none;
- animation: hover .5s linear;
+ animation: slide .5s linear;
+ filter: drop-shadow(0 0 50px var(--main-colour));
 }
 
-@keyframes hover {
- to {
-  width: 100%;
-  filter: drop-shadow(0 0 50px var(--main-colour));
+@keyframes slide {
+ 0%{
+  width: 0%;
  }
+ 50%{
+  width: 100%;
+ }
+ 100%{
+  width: 0%;
+ }
+}
+
+.fade {
+ opacity: 0;
+ visibility: hidden;
 }
 
 .center{
