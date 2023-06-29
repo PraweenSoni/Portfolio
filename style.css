@@ -23,6 +23,59 @@ html {
  --whitesmoke: whitesmoke;
 }
 
+.full {
+ position: fixed;
+ inset: 0;
+ z-index: 9999;
+ /* background-color: #fff; */
+ background-color: black;
+ height: 100vh;
+ width: 100vw;
+ display: grid;
+ place-items: center;
+ transition: opacity .25s, visibility 1s;
+}
+
+.fade {
+ opacity: 0;
+ visibility: hidden;
+}
+
+.wrapper {
+ position: relative;
+ line-height: 50px;
+ font-size: 40px;
+ font-weight: 900;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-family: sans-serif;
+ letter-spacing: 2px;
+}
+
+.text {
+ color: transparent;
+ -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+ cursor: pointer;
+}
+
+.text-hover {
+ position: absolute;
+ inset: 0;
+ color: var(--main-colour);
+ overflow: hidden;
+ border-right: 6px solid var(--main-colour);
+ transition: 5s ease;
+ user-select: none;
+ animation: hover .5s linear;
+}
+
+@keyframes hover {
+ to {
+  width: 100%;
+  filter: drop-shadow(0 0 50px var(--main-colour));
+ }
+}
+
 .center{
  display: flex;
  align-items: center;

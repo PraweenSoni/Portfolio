@@ -1,3 +1,11 @@
+const fadeOut = () => {
+ const loader = document.querySelector('.full');
+ loader.classList.add('fade');
+}
+
+window.addEventListener('load', fadeOut);
+
+
 const update_bar = document.querySelector('.progress_bar');
 console.log(update_bar);
 
