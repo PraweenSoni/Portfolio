@@ -18,7 +18,7 @@
 <body>
  <div class="full">
   <div class="wrapper">
-   <span class="text">&nbsp;Praween&nbsp;</span>
+   <span class="loadertext">&nbsp;Praween&nbsp;</span>
    <span class="text-hover">&nbsp;Praween&nbsp;</span>
   </div>
  </div>
@@ -26,7 +26,7 @@
   <div class="progress">
    <span class="progress_bar"></span>
   </div>
-  <nav>
+  <nav class="center" style="justify-content: space-between">
    <img class="logo" src="" alt="PKS">
    <ul>
     <li><a href="#about">About</a></li>
@@ -35,7 +35,6 @@
     <li><a href="#project">Pojects</a></li>
     <li><a href="#blogs">Blogs</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!--<li><img id="img_mode" src="dark1.jpg" alt="Dark mode"></li>-->
     <li>
      <div id="change_color">Colour</div>
     </li>
@@ -55,6 +54,7 @@
     </div>
    </div>
   </section>
+  <hr>
   <section id="about">
    <p class="heading">ABOUT <span class="maincolor">ME</span></p>
    <div class="about_section center">
@@ -64,8 +64,8 @@
     <div class="about_right">
      <p class="about_name">My Name is <span class="maincolor">Praween Soni</span></p>
      <p><!--My name is <span>Praween kumar soni(Pks)</span> student of BCA.<br> --><br>
-      I'm a new Programer,website maker. I am intresting to web making and designing.I learn Html,Css basic and C++ language and javascript.<br><br>
-      If you intrested in C++,web design so you can visite my youtube channel <a class="a_color" href="https://youtube.com/@CodingMobile">(Coding Mobile)</a> and you can subscribe my channel if you like the videos and see another video. aagar psand aye to hi subscribe kerna wrna nhii but just try once.</p>
+      I'm a new Programer I am intresting to web app development and designing. I learn Html,Css and C++ language and javascript.<br><br>
+      Actually i have a YouTube channel. So, If you intrested in C++,web design so you can visite my youtube channel <a class="a_color" href="https://youtube.com/@CodingMobile">(Coding Mobile)</a> and you can subscribe my channel if you like the videos and see another video. aagar psand aye to hi subscribe kerna wrna nhii but just try once.</p>
      <div class="about_right_down">
       <div class="about_right_left">
        <div class="flex">
@@ -94,8 +94,8 @@
         <span>
          <!--  <a onclick="resume();" id="mycv">My Resume</a> -->
          <a href="" class="btn">
-          <span class="text-1">My Resume</span>
-          <span class="text-2">NOT Uploaded</span>
+          <span class="text-1 center">My Resume</span>
+          <span class="text-2 center">NOT Uploaded</span>
          </a>
         </span>
        </div>
@@ -104,6 +104,7 @@
     </div>
    </div>
   </section>
+  <hr>
   <!-- <section id="services">
    <p class="heading"><span class="maincolor">MY</span> SERVICES</p>
    <div class="service_div center">
@@ -170,28 +171,44 @@
     </div>
    </div>
   </section>
+  <hr>
   <section id="project">
    <p class="heading">MY <span class="maincolor">PROJECT</span></p>
    <div class="service_div">
     <div class="Small_div">
-     <div class="project_img center">
+     <!-- <div class="project_img center">
       <img src="todo img.png" alt="todo img.png">
-     </div>
-     <div class="project_discription">
+     </div> -->
+     <!-- <div class="project_discription">
       <p><a class="a_color" href="https://praweensoni.github.io/my-todo-list/">My Todo list project.</a></p>
+     </div> -->
+     <div class="ovrlycontainer">
+      <div class="ovrlyimg"></div>
+      <div class="ovrlyoverlay"></div>
+      <div class="ovrlytext">
+       <a href="https://praweensoni.github.io/my-todo-list/">TO-DO List Project</a>
+      </div>
      </div>
     </div>
     <div class="Small_div">
-     <div class="project_img center">
+     <!-- <div class="project_img center">
       <img src="happy birthday.png" alt="Happy Birthday project image">
-     </div>
-     <div class="project_discription">
+     </div> -->
+     <!-- <div class="project_discription">
       <p><a class="a_color" href="https://praweensoni.github.io/happy-Birthday-wishes-card-project-/">Happy Birthday wish card.</a></p>
+     </div> -->
+     <div class="ovrlycontainer">
+      <div class="ovrlyimg secondimg"></div>
+      <div class="ovrlyoverlay"></div>
+      <div class="ovrlytext">
+       <a href="https://praweensoni.github.io/happy-Birthday-wishes-card-project-/">Happy Birthday Wish card.</a>
+      </div>
      </div>
     </div>
     <div class="Small_div center"><a class="a_color" href="https://github.com/PraweenSoni?tab=repositories">More..</a></div>
    </div>
   </section>
+  <hr>
   <!-- <section id="blogs">
    <p class="heading">MY <span class="maincolor">BLOGS</span></p>
    <div class="blogs_div center">
@@ -201,7 +218,7 @@
    </div>
    <div class="heading"><a href="https://techwithpks.blogspot.com">More</a></div>
   </section> -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact center">
    <div class="ccontent">
     <h2>Contact Us</h2>
     <p>You Can contact me to fill form and This link</p>
@@ -233,9 +250,8 @@
      </div>
      <div class="box">
       <div class="text">
-       <h3>Email me (on click):</h3>
-       <a href="mailto:pramrajkumar1234@gmail.com" class="btn-main btn2">pramrajkumar1234@gmail.com</a>
-       <p style="color: red">For fast response</p>
+       <h3>Email me (for fast response):</h3>
+       <a class="mail" href="mailto:pramrajkumar1234@gmail.com" class="">pramrajkumar1234@gmail.com</a>
       </div>
      </div>
     </div>
@@ -261,7 +277,8 @@
     </div>
    </div>
   </section>
-  <div onclick="click" id="click">Top</div>
+  <hr>
+  <div onclick="click" class="center" id="click">Top</div>
  </main>
  <footer><big>Pks</big>
   <p> | copyright © <span id="year"></span> Pks.netlify.app |</p>
