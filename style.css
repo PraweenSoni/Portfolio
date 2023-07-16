@@ -50,25 +50,25 @@ html {
  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.6);
 }
 
-.text-hover {
- position: absolute;
- inset: 0;
+.loadertext::before {
+ content: "Praween";
+ width: 100%;
  color: var(--main-colour);
+ position: absolute;
+ top: 0;
+ left: 0;
+ border-right: .5rem solid var(--main-colour);
+ animation: slide 2s linear infinite;
  overflow: hidden;
- border-right: 6px solid var(--main-colour);
- transition: 5s ease;
- user-select: none;
- animation: slide .5s linear;
- filter: drop-shadow(0 0 50px var(--main-colour));
 }
 
 @keyframes slide {
  0%{
   width: 0%;
  }
- 50%{
+  50%{
   width: 100%;
- }
+ } 
  100%{
   width: 0%;
  }
