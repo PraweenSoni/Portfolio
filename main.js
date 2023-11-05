@@ -6,7 +6,7 @@ const fadeOut = () => {
   }
 }
 
-window.addEventListener('load', fadeOut);
+//window.addEventListener('load', fadeOut);
 
 
 const update_bar = document.querySelector('.progress_bar');
