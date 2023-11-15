@@ -276,7 +276,7 @@ main {
 .img_box .down_mypic {
     position: relative;
     font-size: 2rem;
-    top: 55rem;
+    top: 52rem;
     flex-direction: column;
 }
 
@@ -521,7 +521,6 @@ section {
 
 .service_div .Small_div:nth-child(3) {
     background: linear-gradient(120deg, #31acff, #2ad39f, #0170f0);
-    opacity: .9;
 }
 
 /* skill section */
@@ -640,6 +639,15 @@ section {
 
 .skill .skill-content .column-right .cpp::before {
     width: 85%;
+}
+.skill .skill-content .column-right .c::before {
+    width: 75%;
+}
+.skill .skill-content .column-right .kotline::before {
+    width: 5%;
+}
+.skill .skill-content .column-right .py::before {
+    width: 10%;
 }
 
 /* Blogs section code */
