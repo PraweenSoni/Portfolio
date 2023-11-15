@@ -282,17 +282,10 @@ main {
 }
 
 .img_box .down_mypic {
-<<<<<<< HEAD
-    position: relative;
-    font-size: 2rem;
-    top: 52rem;
-    flex-direction: column;
-=======
  position: relative;
  font-size: 2rem;
  top: 55rem;
  flex-direction: column;
->>>>>>> c47f6205ace0ca98eaa20221a32d13c68a15bc01
 }
 
 .name {
@@ -538,12 +531,8 @@ section {
 }
 
 .service_div .Small_div:nth-child(3) {
-<<<<<<< HEAD
-    background: linear-gradient(120deg, #31acff, #2ad39f, #0170f0);
-=======
  background: linear-gradient(120deg, #31acff, #2ad39f, #0170f0);
  opacity: .9;
->>>>>>> c47f6205ace0ca98eaa20221a32d13c68a15bc01
 }
 
 /* skill section */
