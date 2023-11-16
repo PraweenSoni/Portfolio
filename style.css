@@ -566,14 +566,23 @@ section {
  background-color: var(--white);
  box-shadow: 0 0 2rem .2rem rgba(0, 0, 0, 0.3);
  /* transition: all 0.3s ease; */
+ overflow: hidden;
 }
 
 .skill .skill-content .column-left {
  transform: translateX(-100%);
 }
+.skill .skill-content .column-left .skillAboutMeText{
+    height: 38rem;
+    overflow: scroll;
+}
 
 .skill .skill-content .column-right {
  transform: translateX(100%);
+}
+.skill .skill-content .column-right .skillProgressBars{
+    height: 43rem;
+    overflow: scroll;
 }
 
 .sec-3.show-animation .skill-content .column-left {
@@ -733,6 +742,13 @@ width: 10%;
  color: var(--black);
  text-align: center;
  margin-bottom: 1.4rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#services .service_div .Small_div .box .text i{
+    padding-bottom: .5rem;
 }
 
 #services .services_div .Small_div p,
