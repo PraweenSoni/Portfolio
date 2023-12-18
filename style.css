@@ -816,13 +816,17 @@ width: 10%;
 }
 
 .container-2 .contactinfo .box .text .links a {
- font-size: 2rem;
+ font-size: 2.5rem;
+ margin-right: .5rem;
  color: var(--black);
 }
-
 .container-2 .contactinfo .box .text h3 {
  font-weight: 500;
  color: var(--main-colour);
+}
+
+.container-2 .contactinfo .mail{
+ color: var(--black);
 }
 
 .contactform {
@@ -952,7 +956,9 @@ footer p {
   font-size: 33rem;
   stroke-width: 12;
  }
-
+ .topbtn{
+  left: 85%;
+ }
  .img_box .box1 img {
   height: 20rem;
  }
@@ -963,7 +969,7 @@ footer p {
   top: 40rem;
  }
 
- nav ul li {
+ nav, nav ul li{
   display: none;
  }
 
@@ -1012,6 +1018,12 @@ footer p {
   height: 30rem;
   width: 30rem;
   margin: 3rem 5% 0 5%;
+ }
+ .skill .skill-content .column-left .skillAboutMeText{
+  height: 23rem;
+ }
+ .skill .skill-content .column-right .skillProgressBars{
+    height: 28rem;
  }
  .skill .skill-content .column-left .text {
  font-size: 2rem;
