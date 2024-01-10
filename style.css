@@ -367,7 +367,7 @@ section {
 
 .about_section .about_left {
  border: .2rem solid var(--black);
- width: 60rem;
+ width: 65rem;
  /* transition: .3s ease; */
  object-fit: contain;
  height: 52rem;
@@ -398,6 +398,7 @@ section {
 
 #about .about_section .about_right {
  padding: 3rem;
+ width: 190rem;
 }
 
 #about .about_section .about_right .about_name {
@@ -408,6 +409,7 @@ section {
 #about .about_section .about_right p {
  color: var(--black);
  font-size: 1.5rem;
+ line-height: 2rem;
 }
 
 #about .about_section .about_right .about_right_down {
