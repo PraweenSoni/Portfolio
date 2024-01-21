@@ -69,6 +69,36 @@ function resume() {
 //   alert("Error!! Please Click on email and connect with us.");
 // }
 
+let cnt_from = document.getElementById('cnt_from'),
+from_btn = document.getElementById('from_btn'),
+from_msg = document.querySelector('.msg_container'),
+show_from_btn = document.getElementById('show_from_btn'),
+counter = 4;
+
+from_msg.style.display="none";
+
+function show_msg(){
+  from.style.display="none";
+  from_msg.style.display="flex";
+  let timeout = setInterval(()=>{
+    show_from_btn.innerText = counter;
+    counter--;
+  },1000);
+  setTimeout(()=>{
+    clearInterval(timeout);
+    show_from_btn.innerText = "OK";
+    cnt_from.reset();
+  },5000)
+}
+cnt_from.addEventListener("click",()=>{
+  show_msg();
+})
+
+function show_from(){
+  from.style.display="block";
+  from_msg.style.display="none";
+}
+
 document.querySelector("#click").onclick = scroll
 let CopyRigthYear = document.getElementById('year');
 CopyRigthYear.textContent = new Date().getFullYear();
