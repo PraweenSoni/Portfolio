@@ -1,7 +1,7 @@
 const fadeOut = () => {
   const loader = document.querySelector('.full');
   setTimeout(fadefun, 3800);
-  function fadefun(){
+  function fadefun() {
     loader.classList.add('fade');
   }
 }
@@ -55,7 +55,7 @@ window.onscroll = () => {
 
     if (top >= offset && top < offset + height) {
       sec.classList.add('show-animation');
-     }
+    }
     // else {
     //   sec.classList.remove('show-animation');
     // }
@@ -70,33 +70,46 @@ function resume() {
 // }
 
 let cnt_from = document.getElementById('cnt_from'),
-from_btn = document.getElementById('from_btn'),
-from_msg = document.querySelector('.msg_container'),
-show_from_btn = document.getElementById('show_from_btn'),
-counter = 4;
+  from_btn = document.getElementById('from_btn'),
+  from_msg = document.querySelector('.msg_container'),
+  show_from_btn = document.getElementById('show_from_btn'),
+  counter = 4;
 
-from_msg.style.display="none";
+from_msg.style.display = "none";
 
-function show_msg(){
-  from.style.display="none";
-  from_msg.style.display="flex";
-  let timeout = setInterval(()=>{
-    show_from_btn.innerText = counter;
-    counter--;
-  },1000);
-  setTimeout(()=>{
-    clearInterval(timeout);
-    show_from_btn.innerText = "OK";
-    cnt_from.reset();
-  },5000)
-}
-cnt_from.addEventListener("click",()=>{
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw1ssvc5v9cv7tXbyKpa3OTU556f39EGgk8EgHWrIf8gk1mEwBzfVmjXE7q_9tSPRCq/exec'
+//const form = document.forms['cnt_form']
+
+cnt_from.addEventListener('submit', e => {
   show_msg();
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(cnt_from) })
+    .then(response =>{
+      
+    })
+    .catch(error => console.error('Error!', error.message))
 })
 
-function show_from(){
-  from.style.display="block";
-  from_msg.style.display="none";
+function show_msg() {
+  cnt_from.style.display = "none";
+  from_msg.style.display = "flex";
+  let timeout = setInterval(() => {
+    show_from_btn.innerText = counter;
+    counter--;
+  }, 1000);
+  setTimeout(() => {
+    clearInterval(timeout);
+    show_from_btn.innerText = "OK";
+    show_from_btn.addEventListener('click',(()=>{
+      show_form();
+    }))
+    cnt_from.reset();
+  }, 5000)
+}
+
+function show_form() {
+  cnt_from.style.display = "block";
+  from_msg.style.display = "none";
 }
 
 document.querySelector("#click").onclick = scroll
