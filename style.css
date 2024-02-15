@@ -762,8 +762,19 @@ section {
     align-items: center;
 }
 
-#services .service_div .Small_div .box .text i {
-    padding-bottom: .5rem;
+.box .text .icons {
+    padding-bottom: 1rem;
+}
+.box .text i {
+    padding-bottom: .6rem;
+}
+
+.devops_iot_icon{
+    height: 18px;
+    width: 30px;
+}
+.iot{
+    height: 30px;
 }
 
 #services .services_div .Small_div p,
