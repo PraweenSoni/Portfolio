@@ -468,15 +468,16 @@ section {
 .service_div {
     height: 45rem;
     width: 90vw;
-    margin: 1rem 5%;
+    margin: 1rem auto;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .service_div .Small_div {
     border: 2px solid var(--white);
-    width: 30%;
+    width: 40rem;
     height: 20rem;
-    margin: 1rem;
+    margin: 1rem auto;
     transform: translateX(-100%);
     transition-delay: calc(.2s * var(--i));
 }
@@ -548,8 +549,12 @@ section {
     background: url(/images/happybirthday.png);
     background-size: cover;
 }
+.ovrlycontainer .imgcomp {
+    background: url(/images/imgcomp.png);
+    background-size: cover;
+}
 
-.service_div .Small_div:nth-child(3) {
+.service_div .Small_div:nth-child(4) {
     background: linear-gradient(120deg, #31acff, #2ad39f, #0170f0);
     opacity: .9;
 }
@@ -716,20 +721,21 @@ section {
 /* my services */
 
 .services_div {
-    height: 65rem;
+    /* height: 65rem; */
     width: 90vw;
-    margin: 1rem 5%;
+    margin: 1rem auto;
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 
 .services_div .Small_div {
-    border: 2px solid var(--white);
-    width: 30%;
+    border: 3px solid var(--white);
+    width: 40rem;
     height: 20rem;
-    margin: 1rem;
+    margin: 1rem auto;
     border-radius: 1rem;
-    padding: 2.3rem;
+    padding: 3rem;
     background-color: var(--white);
     transform: translateX(100%);
     transition-delay: calc(.2s * var(--i));
