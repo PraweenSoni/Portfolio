@@ -462,6 +462,7 @@ section {
 
 .btn:hover .text-2 {
     transform: rotateX(0deg);
+    cursor: pointer;
 }
 
 /* Service section code */
