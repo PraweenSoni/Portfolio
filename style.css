@@ -333,7 +333,7 @@ main {
     }
 }
 
-.down_mypic #contactbtn a {
+.down_mypic #contactbtn {
     color: var(--white);
     font-size: 2rem;
     text-decoration: none;
