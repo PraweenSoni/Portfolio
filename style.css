@@ -483,6 +483,7 @@ section {
     transition-delay: calc(.2s * var(--i));
 }
 
+
 .sec-4.show-animation .service_div .Small_div {
     transform: translateX(0);
 }
@@ -1089,6 +1090,7 @@ footer p {
     .container-2,
     .blogs_div {
         display: grid;
+        height: 100%;
     }
 
     #about .about_section .about_left {
@@ -1149,7 +1151,7 @@ footer p {
     }
 
     .services_div .Small_div {
-        width: 31rem;
+        width: 30rem;
     }
 
     .contact .ccontent {

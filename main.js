@@ -65,9 +65,6 @@ window.onscroll = () => {
 function resume() {
   alert("Resume not uploaded yet.");
 }
-// function contact() {
-//   alert("Error!! Please Click on email and connect with us.");
-// }
 
 let cnt_from = document.getElementById('cnt_from'),
   from_btn = document.getElementById('from_btn'),
