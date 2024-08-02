@@ -555,6 +555,14 @@ section {
     background: url(/images/imgcomp.png);
     background-size: cover;
 }
+.ovrlycontainer .typingbgimg {
+    background: url(/images/typingbgimg.jpg);
+    background-size: cover;
+}
+.ovrlycontainer .urlbgimg {
+    background: url(/images/urlbgimg.jpg);
+    background-size: cover;
+}
 
 .service_div .Small_div:nth-child(4) {
     background: linear-gradient(120deg, #31acff, #2ad39f, #0170f0);
@@ -620,7 +628,7 @@ section {
 .skill .skill-content .column-left:hover,
 .skill .skill-content .column-right:hover,
 .start-c .course-c .cpp-c:hover,
-.java-c:hover,
+.js-c:hover,
 .css-c:hover,
 .html-c:hover {
     box-shadow: 0 0 2rem 1rem var(--main-colour);
@@ -677,7 +685,7 @@ section {
     width: 80%;
 }
 
-.skill .skill-content .column-right .java::before {
+.skill .skill-content .column-right .js::before {
     width: 50%;
 }
 
@@ -687,6 +695,10 @@ section {
 
 .skill .skill-content .column-right .sql::before {
     width: 70%;
+}
+
+.skill .skill-content .column-right .java::before {
+    width: 5%;
 }
 
 .skill .skill-content .column-right .cpp::before {

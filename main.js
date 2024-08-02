@@ -9,6 +9,11 @@ const fadeOut = () => {
 window.addEventListener('load', fadeOut);
 
 
+// Desable when debugging
+document.addEventListener("contextmenu", function(event){
+  event.preventDefault();
+})
+
 const update_bar = document.querySelector('.progress_bar');
 console.log(update_bar);
 
