@@ -31,11 +31,9 @@ const scroll = () => {
 };
 
 const box = document.getElementById("box");
-let lines = ["Programmer.", "Web Developer.", "BCA Student"];
+let lines = ["Programmer.", "WebApp Developer.", "Bsc.CA Student", "Open source contributor"];
 //computer science engineering
 //software developer
-//web/app developer 
-// open source contributor 
 let i = 0,
   j = 0,
   wait = 6;
