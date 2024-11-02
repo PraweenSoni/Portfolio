@@ -861,9 +861,15 @@ section {
     flex-direction: column;
 }
 
+.container-2 .contactinfo .box .text .links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 .container-2 .contactinfo .box .text .links a {
+    display: flex;
+    align-items: center;
     font-size: 2.5rem;
-    margin-right: .5rem;
     color: var(--black);
 }
 
