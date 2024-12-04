@@ -31,7 +31,7 @@ const scroll = () => {
 };
 
 const box = document.getElementById("box");
-let lines = ["Programmer.", "WebApp Developer.", "Bsc.CA Student", "Open source contributor"];
+let lines = ["Programmer.", "Web Developer.", "Bsc.CA Student", "Open source contributor"];
 //computer science engineering
 //software developer
 let i = 0,
