@@ -1,11 +1,19 @@
+
+
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   /* margin: 0 auto; */
   padding: 2rem;
-  /* text-align: center; */
+  display: flex;
 }
 
-.profilecard{
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilecard > .profile{
   display: flex;
   align-items: center;
 }
@@ -15,18 +23,110 @@
   border-radius: 50%;
   padding: .4rem;
   margin-right: 1rem;
+  position: relative;
+  /* top: -45px; */
   will-change: filter;
   transition: filter 300ms;
 }
 .MyPic:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 1rem var(--primary-colour));
 }
+
+
 .profilecard div h2{
   font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  color: var(--primary-colour);
 }
 .profilecard div h4{
   font-size: 1.3rem;
 }
+.profilecard div .icons{
+  margin: .6rem 0;
+  width: 100%;
+}
+
+.profilecard div .icons a{
+  color: var(--white);
+  font-size: 23px;
+  margin: 0 10px;
+  transition: ease .3s;
+}
+.profilecard div .icons .insta{
+  margin-left: 0;
+}
+.profilecard div .icons .insta:hover {
+  color: #fd03ba;
+}
+.profilecard div .icons .linkdin:hover {
+  color: #0a66c2 !important;
+}
+.profilecard div .icons .github:hover {
+  color: black !important;
+}
+.profilecard div .icons .leetcode:hover {
+  color: rgb(254, 166, 1) !important;
+}
+.profilecard div .icons .mail:hover {
+  color: #dc4b3f;
+}
+
+/* Resume Button code */
+.profilecard .otherDetails .resumeBtn{
+  height: 4rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.profilecard .otherDetails .text-1,
+.profilecard .otherDetails .text-2 {
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    /* transform-origin: 50% 50% -25px; other style */
+    transition: all 0.3s;
+    border-radius: .2rem;
+}
+
+.profilecard .otherDetails .text-1 {
+    transform: rotateX(0deg);
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.profilecard .otherDetails .text-2 {
+    transform: rotateX(90deg);
+    background-color: var(--primary-colour);
+    color: #131313;
+}
+.profilecard .otherDetails .text-2 svg{
+  font-size: 1.5rem;
+}
+.profilecard .otherDetails .btn:hover .text-2 {
+    transform: rotateX(0deg);
+    cursor: pointer;
+}
+
+.profilecard .otherDetails{
+  display: flex;
+  padding: .5rem;
+}
+.profilecard .otherDetails .other{
+  /* padding-top: .5rem; */
+  width: 16rem;
+  max-width: 16.5rem;
+}
+
+.otherDetails .other div > span{
+  color: var(--primary-colour);
+  font-size: 1.2rem;
+}
+.otherDetails .other div > p{
+  color: var(--white);
+  margin-left: .5rem;
+}
+
 
 /* @keyframes logo-spin {
   from {
@@ -41,10 +141,6 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
