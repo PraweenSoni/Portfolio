@@ -1,0 +1,32 @@
+nav{
+    width: 60rem;
+    height: 2rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+}
+nav ul button{
+    margin: 0 .2rem;
+    padding: .5rem .3rem .5rem .1rem;
+    border: none;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ccc;
+}
+nav ul button:hover{
+    color: #fff;
+}
+nav ul li {
+    height: 100%;
+    list-style: none;
+    margin: 0 1rem;
+    transition: all .2s ease;
+}
+nav ul button li svg{
+    margin: 0 .2rem;
+}

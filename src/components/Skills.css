@@ -1,0 +1,34 @@
+.skill-container:hover {
+  scale: 1.025;
+}
+
+.skill-container > p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.skill-container div ul {
+  display: flex;
+}
+.skill-container div ul li {
+  list-style: none;
+  margin: 0 0.3rem;
+  border: 2px solid var(--black);
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+}
+.skill-container div ul li:hover {
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+.skills-section {
+  transition: 0.1s;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+}
