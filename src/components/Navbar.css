@@ -1,32 +1,37 @@
-nav{
+nav {
     width: 60rem;
     height: 2rem;
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: end;
 }
-nav ul button{
-    margin: 0 .2rem;
-    padding: .5rem .3rem .5rem .1rem;
+
+nav ul button {
+    margin: 0 0.2rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.1rem;
     border: none;
     font-size: 1rem;
-    transition: .3s;
-    border-radius: .2rem;
+    transition: 0.3s;
+    border-radius: 0.2rem;
     cursor: pointer;
     background-color: transparent;
     color: #ccc;
 }
-nav ul button:hover{
+
+nav ul button:hover {
     color: #fff;
 }
+
 nav ul li {
     height: 100%;
     list-style: none;
     margin: 0 1rem;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
+    font-family: 'Acme', sans-serif;
 }
-nav ul button li svg{
-    margin: 0 .2rem;
+
+nav ul button li svg {
+    margin: 0 0.2rem;
 }

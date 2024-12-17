@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <ProfileCard />
-      <div>
+      <div className="sectionContainer">
         <Sections activeSection={activeSection} setActiveSection={setActiveSection} />
       </div>
     </>

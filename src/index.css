@@ -79,5 +79,8 @@ button:focus-visible {
   }
 } */
 .project-card-container{
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
 }
