@@ -14,7 +14,8 @@ const ProjectCard = (props) => {
         <h2 className="project-card-title">{props.projectDetails.title} !</h2>
         <p>{props.projectDetails.desc}</p>
         <div className="project-card-actions">
-          <button className="project-btn"><a href={props.projectDetails.gLink}><FaGithub />Visit Github</a></button>
+          <button className="project-btn"><a href={props.projectDetails.gLink} target="_blank"><FaGithub />Github</a></button>
+          <button className="project-btn"><a href={props.projectDetails.lLink} target="_blank"><FaGithub />Website</a></button>
         </div>
       </div>
     </div>
