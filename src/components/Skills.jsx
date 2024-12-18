@@ -14,8 +14,7 @@ const Skills = () => {
 
   const technologiesFrameworks = [
     "React.js",
-    "Node.js",
-    "Express.js",
+    "Node.js/Express.js",
     "MongoDB",
     "MySQL",
     "Bootstrap",

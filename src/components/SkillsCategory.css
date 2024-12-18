@@ -1,5 +1,5 @@
 .skills-category {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   border: 2px solid var(--black);
   width: 55rem;
   padding: 1rem;
@@ -7,7 +7,7 @@
   transition: all .2s ease;
 }
 .skills-category:hover{
-    scale: 1.05;
+    scale: 1.03;
 }
 
 .skills-category h4 {
