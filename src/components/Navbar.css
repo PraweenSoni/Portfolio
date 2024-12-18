@@ -1,37 +1,43 @@
 nav {
-    width: 60rem;
-    height: 2rem;
+  width: 60rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 99;
 }
 
 nav ul {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
 nav ul button {
-    margin: 0 0.2rem;
-    padding: 0.5rem 0.3rem 0.5rem 0.1rem;
-    border: none;
-    font-size: 1rem;
-    transition: 0.3s;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    background-color: transparent;
-    color: #ccc;
+  margin: 0 0.2rem;
+  padding: 0.5rem 0.3rem 0.5rem 0.1rem;
+  border: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ccc;
+  backdrop-filter: blur(.7rem);
+  border: 2px solid rgba(255,255,255,.18);
 }
 
 nav ul button:hover {
-    color: #fff;
+  color: #fff;
+  backdrop-filter: blur(1rem);
+  border: 2px solid #fff;
 }
 
 nav ul li {
-    height: 100%;
-    list-style: none;
-    margin: 0 1rem;
-    transition: all 0.2s ease;
-    font-family: 'Acme', sans-serif;
+  height: 100%;
+  list-style: none;
+  margin: 0 1rem;
+  transition: all 0.2s ease;
+  font-family: "Acme", sans-serif;
 }
 
 nav ul button li svg {
-    margin: 0 0.2rem;
+  margin: 0 0.2rem;
 }
