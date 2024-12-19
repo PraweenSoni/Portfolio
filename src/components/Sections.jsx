@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Home from "./Home";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import "./Sections.css";
@@ -12,7 +13,7 @@ const Sections = ({ activeSection, setActiveSection }) => {
       </header>
       <main>
         <h3>{activeSection}</h3>
-        {activeSection === "Home" && <div>Welcome to Home Section</div>}
+        {activeSection === "Home" && <Home/>}
         {activeSection === "Projects" && <Projects />}
         {activeSection === "Skills" && <Skills />}
       </main>

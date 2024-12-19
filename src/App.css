@@ -1,6 +1,4 @@
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
   padding: 2rem;
   display: flex;
 }
@@ -60,13 +58,13 @@
   color: #fd03ba;
 }
 .profilecard div .icons .linkdin:hover {
-  color: #0a66c2 !important;
+  color: #0a66c2;
 }
 .profilecard div .icons .github:hover {
-  color: black !important;
+  color: black;
 }
 .profilecard div .icons .leetcode:hover {
-  color: rgb(254, 166, 1) !important;
+  color: rgb(254, 166, 1);
 }
 .profilecard div .icons .mail:hover {
   color: #dc4b3f;
@@ -114,7 +112,6 @@
   padding: .5rem;
 }
 .profilecard .otherDetails .other{
-  /* padding-top: .5rem; */
   width: 16rem;
   max-width: 16.5rem;
 }
@@ -148,7 +145,3 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
-.read-the-docs {
-  color: #888;
-} */

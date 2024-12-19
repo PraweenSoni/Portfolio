@@ -33,6 +33,12 @@ const Skills = () => {
     "Teamwork",
   ];
 
+  const IOT = [
+    "Ardunino IDE",
+    "Ardunino Nano",
+    "Esp32",
+    "Esp8266",
+  ];
   const platforms = [
     "Windows",
     "Linux",
@@ -44,6 +50,7 @@ const Skills = () => {
       <SkillsCategory title="Technologies/Frameworks" skills={technologiesFrameworks} />
       <SkillsCategory title="Developer Tools" skills={developerTools} />
       <SkillsCategory title="Soft Skills" skills={shoftSkills} />
+      <SkillsCategory title="IOT" skills={IOT} />
       <SkillsCategory title="Platforms" skills={platforms} />
     </section>
   );
