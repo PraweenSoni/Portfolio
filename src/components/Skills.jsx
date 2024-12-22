@@ -1,8 +1,14 @@
 import React from "react";
 import SkillsCategory from "./SkillsCategory";
 import "./Skills.css";
+import { IoDiamondOutline } from "react-icons/io5";
 
 const Skills = () => {
+  const topSkills = [
+    "JavaScript",
+    "Java",
+    "C++",
+  ];
   const programmingLanguages = [
     "JavaScript",
     "Java",
@@ -46,6 +52,7 @@ const Skills = () => {
 
   return (
     <section className="skills-section">
+      <SkillsCategory title="Top Skills" skills={topSkills} />
       <SkillsCategory title="Programming Languages" skills={programmingLanguages} />
       <SkillsCategory title="Technologies/Frameworks" skills={technologiesFrameworks} />
       <SkillsCategory title="Developer Tools" skills={developerTools} />

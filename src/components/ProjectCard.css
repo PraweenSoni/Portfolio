@@ -43,6 +43,7 @@
 }
 
 .project-card-body p{
+    color: var(--txt-white);
     height: 55%;
     max-height: 57%;
     overflow: scroll;

@@ -18,7 +18,7 @@ nav ul button {
   border-radius: 0.2rem;
   cursor: pointer;
   background-color: transparent;
-  color: #ccc;
+  color: var(--txt-white);
   backdrop-filter: blur(.7rem);
   border: 2px solid rgba(255,255,255,.18);
 }
@@ -68,15 +68,18 @@ nav ul button:nth-last-child(1):hover .setting{
 .setting .sbox .stheme p{
   margin: .5rem .7rem;
   font-size: 1.2rem;
+  color: var(--txt-white);
 }
 .setting .sbox .stheme button{
   font-family: 'Acme', sans-serif;
   width: 100%;
   border: none;
   border-radius: 0%;
+  color: var(--txt-white);
   font-size: 1rem;
   padding: .5rem 0;
   cursor: pointer;
+  background-color: var(--bg-color);
 }
 
 .setting .sbox .stheme button:hover{
