@@ -65,10 +65,6 @@ window.onscroll = () => {
   })
 }
 
-function resume() {
-  alert("Resume not uploaded yet.");
-}
-
 let cnt_from = document.getElementById('cnt_from'),
   from_btn = document.getElementById('from_btn'),
   from_msg = document.querySelector('.msg_container'),
