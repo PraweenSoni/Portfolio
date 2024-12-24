@@ -69,7 +69,9 @@ button:focus-visible {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
-
+.HomeSec{
+  height: 70vh;
+}
 .HomeSec p{
   line-height: 1.8rem;
   word-spacing: .1rem;
@@ -78,4 +80,11 @@ button:focus-visible {
 }
 .HomeSec p span{
   color: var(--primary-colour);
+}
+
+footer{
+  position: relative;
+  top: 2rem;
+  text-align: right;
+  margin-bottom: 1rem;
 }

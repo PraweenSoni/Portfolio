@@ -1,6 +1,6 @@
 #root {
   padding: 2rem;
-  display: flex;
+  /* display: flex; */
 }
 
 .center{
@@ -125,8 +125,8 @@
   margin-left: .5rem;
 }
 
-
 .sectionContainer{
+  width: 64rem;
   position: relative;
   left: 22rem;
 }
