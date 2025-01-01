@@ -1,6 +1,6 @@
 import React from "react";
 import SkillsCategory from "./SkillsCategory";
-import "./Skills.css";
+import "../styles/Skills.css";
 import { IoDiamondOutline } from "react-icons/io5";
 
 const Skills = () => {
