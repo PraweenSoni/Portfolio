@@ -38,6 +38,11 @@ nav ul button:hover {
   border: 2px solid #fff;
 }
 
+nav ul button.active {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
 nav ul li {
   height: 100%;
   list-style: none;

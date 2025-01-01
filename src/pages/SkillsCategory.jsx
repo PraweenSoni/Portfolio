@@ -1,5 +1,5 @@
 import React from "react";
-import "./SkillsCategory.css";
+import "../styles/SkillsCategory.css";
 
 const SkillsCategory = ({ title, skills }) => {
   return (
