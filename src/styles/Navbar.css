@@ -91,3 +91,8 @@ nav ul button:nth-last-child(1):hover .setting{
   background-color: #3d3d3d;
   color: var(--primary-colour);
 }
+@media(max-width: 570px) {
+  nav{
+    width: 27rem;
+  }
+}

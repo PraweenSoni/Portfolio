@@ -9,3 +9,10 @@ main h3{
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
+@media(max-width: 570px) {
+   main{
+    width: 100%;
+    top: 18.5rem;
+   }
+}

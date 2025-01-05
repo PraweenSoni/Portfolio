@@ -1,6 +1,6 @@
 #root {
+  width: 100%;
   padding: 2rem;
-  /* display: flex; */
 }
 
 .center{
@@ -10,7 +10,7 @@
 }
 .profilecard{
   position: fixed;
-  width: 22rem;
+  width: 23rem;
 }
 .profilecard > .profile{
   display: flex;
@@ -47,8 +47,8 @@
 
 .profilecard div .icons a{
   color: var(--white);
-  font-size: 23px;
-  margin: 0 10px;
+  font-size: 1.6rem;
+  margin: 0 .7rem;
   transition: ease .3s;
 }
 .profilecard div .icons .insta{
@@ -143,5 +143,21 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+} */
+
+@media(max-width: 998px) {
+  .profilecard{
+    position: absolute;
+    width: 24rem;  /* 23rem*/
+    top: 6rem;
+  }
+  .profilecard div .icons a{
+    margin: 0 .5rem;
+  }
+  .sectionContainer{
+    width: 28rem;     /* 27rem*/
+    /* position: ; */
+    left: -3rem;
   }
 }
