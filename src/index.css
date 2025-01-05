@@ -37,7 +37,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -87,4 +87,16 @@ footer{
   top: 2rem;
   text-align: right;
   margin-bottom: 1rem;
+}
+
+@media(max-width: 998px) {
+  html {
+      font-size: 85%;
+  }
+}
+
+@media(max-width: 570px) {
+  .project-card-container{
+    width: 95%;
+  }
 }

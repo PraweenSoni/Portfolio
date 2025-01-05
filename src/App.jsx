@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myPic from "/pic.png";
-import Sections from "./components/sections";
+import Sections from "./components/Sections";
 import "./App.css";
 import Footer from "./components/Footer";
 

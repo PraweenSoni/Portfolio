@@ -38,3 +38,9 @@
   background-color: var(--black);
   cursor: pointer;
 }
+
+@media(max-width: 570px) {
+  .skills-category{
+    width: 100%;
+  }
+}
