@@ -6,7 +6,6 @@
   --bg-color: #2d2e2d;
   --txt-white: #ccc;
 
-  font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--bg-color);
@@ -22,33 +21,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -83,13 +55,12 @@ button:focus-visible {
 }
 
 footer{
-  position: relative;
-  top: 2rem;
-  text-align: right;
-  margin-bottom: 1rem;
+  position: absolute;
+  right: 4rem;
+  bottom: 2rem;
 }
 
-@media(max-width: 998px) {
+/* @media(max-width: 998px) {
   html {
       font-size: 85%;
   }
@@ -99,4 +70,4 @@ footer{
   .project-card-container{
     width: 95%;
   }
-}
+} */

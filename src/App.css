@@ -1,6 +1,10 @@
 #root {
-  width: 100%;
-  padding: 2rem;
+  padding: min(2rem, 8%);
+  min-width: 100vw;
+  min-width: 100dvw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* overflow: hidden; */
 }
 
 .center{
@@ -10,7 +14,8 @@
 }
 .profilecard{
   position: fixed;
-  width: 23rem;
+  width: 27%;
+  min-width: 21rem;
 }
 .profilecard > .profile{
   display: flex;
@@ -33,22 +38,23 @@
 
 
 .profilecard div h2{
-  font-size: 2rem;
+  font-size: clamp(1.5rem, calc(.5vw + 1.5rem), 3rem);
   font-family: 'Pacifico', cursive;
   color: var(--primary-colour);
 }
 .profilecard div h4{
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.5rem, 1.8rem);
 }
 .profilecard div .icons{
-  margin: .6rem 0;
+  margin-top: calc(1vh);
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .profilecard div .icons a{
   color: var(--white);
-  font-size: 1.6rem;
-  margin: 0 .7rem;
+  font-size: clamp(1rem, calc(.8vw + 1rem), 2.2rem);
   transition: ease .3s;
 }
 .profilecard div .icons .insta{
@@ -126,9 +132,10 @@
 }
 
 .sectionContainer{
-  width: 64rem;
+  /* width: 64rem; */
   position: relative;
-  left: 22rem;
+  /* left: 22rem; */
+  /* margin: 2rem; */
 }
 
 /* @keyframes logo-spin {
@@ -146,18 +153,17 @@
   }
 } */
 
-@media(max-width: 998px) {
+/* @media(max-width: 998px) {
   .profilecard{
     position: absolute;
-    width: 24rem;  /* 23rem*/
+    width: 24rem;
     top: 6rem;
   }
   .profilecard div .icons a{
     margin: 0 .5rem;
   }
   .sectionContainer{
-    width: 28rem;     /* 27rem*/
-    /* position: ; */
+    width: 28rem;    
     left: -3rem;
   }
-}
+} */
