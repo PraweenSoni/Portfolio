@@ -1,5 +1,5 @@
 nav {
-  width: 60rem;
+  width: 100vw;
   position: fixed;
   z-index: 99;
   right: 4rem;
@@ -76,7 +76,7 @@ nav ul button:nth-last-child(1):hover .setting{
   font-size: 1.2rem;
   color: var(--txt-white);
 }
-.setting .sbox .stheme button{
+.setting .sbox .stheme div{
   font-family: 'Acme', sans-serif;
   width: 100%;
   border: none;
@@ -88,12 +88,33 @@ nav ul button:nth-last-child(1):hover .setting{
   background-color: var(--bg-color);
 }
 
-.setting .sbox .stheme button:hover{
+.setting .sbox .stheme div:hover{
   background-color: #3d3d3d;
   color: var(--primary-colour);
 }
 @media(max-width: 570px) {
   nav{
-    width: 27rem;
+    right: 0;
+  }
+  nav ul {
+    justify-content: center;
+  }
+  nav ul li{
+    margin: 0 .5rem; 
+  }
+  .setting{
+    width: 10rem;
+  }
+  .setting .sbox .stheme p {
+    font-size: 1rem;
+  }
+  .setting .sbox .stheme div {
+    font-size: .9rem;
   }
 }
+
+/* @media(min-width: 360px) {
+  nav ul li{
+    margin: 0 .3rem;
+  }
+} */

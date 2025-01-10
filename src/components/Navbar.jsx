@@ -76,22 +76,22 @@ const Navbar = ({ setActiveSection }) => {
           <li>
             <IoSettingsOutline />
           </li>
+          <div
+            className="setting"
+            ref={settingRef}
+            style={{ display: isSettingVisible ? "block" : "none" }}
+          >
+            <div className="sbox">
+              <div className="stheme">
+                <p>Theme</p>
+                <div>System Default</div>
+                <div>Dark Mode</div>
+                <div>Light Mode</div>
+              </div>
+            </div>
+          </div>
         </button>
       </ul>
-      <div
-        className="setting"
-        ref={settingRef}
-        style={{ display: isSettingVisible ? "block" : "none" }}
-      >
-        <div className="sbox">
-          <div className="stheme">
-            <p>Theme</p>
-            <button>System Default</button>
-            <button>Dark Mode</button>
-            <button>Light Mode</button>
-          </div>
-        </div>
-      </div>
     </nav>
   );
 };

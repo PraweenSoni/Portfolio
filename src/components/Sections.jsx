@@ -2,6 +2,8 @@ import Home from "../pages/Home";
 import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import "../styles/Sections.css";
+import Footer from "./Footer";
+import { useEffect } from "react";
 
 // Icons
 import myPic from "/pic.png";
@@ -14,6 +16,7 @@ import { TbFileDownload } from "react-icons/tb";
 
 
 const Sections = ({ activeSection}) => {
+
   return (
     <>
       <header>
@@ -25,6 +28,7 @@ const Sections = ({ activeSection}) => {
         {activeSection === "Projects" && <Projects />}
         {activeSection === "Skills" && <Skills />}
       </main>
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,5 @@
 #root {
-  padding: min(2rem, 8%);
+  padding: min(2rem, 5%);
   min-width: 100vw;
   min-width: 100dvw;
   min-height: 100vh;
@@ -20,10 +20,11 @@
 .profilecard > .profile{
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 .MyPic {
-  height: 8rem;
-  width: 8rem;
+  height: clamp(3rem, calc(1vw + 6.5rem), 8rem);
+  width: clamp(3rem, calc(1vw + 6.5rem), 8rem);
   border-radius: 50%;
   padding: .4rem;
   margin-right: 1rem;
@@ -43,7 +44,7 @@
   color: var(--primary-colour);
 }
 .profilecard div h4{
-  font-size: clamp(1rem, 1.5rem, 1.8rem);
+  font-size: clamp(1rem, calc(.4vw + 1rem), 1.8rem);
 }
 .profilecard div .icons{
   margin-top: calc(1vh);
@@ -78,9 +79,10 @@
 
 /* Resume Button code */
 .profilecard .otherDetails .resumeBtn{
-  height: 4rem;
+  width: 10rem;
+  /* height: 4rem;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 1rem; */
 }
 
 .profilecard .otherDetails .text-1,
@@ -115,10 +117,11 @@
 
 .profilecard .otherDetails{
   display: flex;
+  justify-content: space-evenly;
   padding: .5rem;
 }
 .profilecard .otherDetails .other{
-  width: 16rem;
+  /* width: 16rem; */
   max-width: 16.5rem;
 }
 
@@ -152,7 +155,17 @@
     animation: logo-spin infinite 20s linear;
   }
 } */
-
+@media(max-width: 570px) {
+  .profilecard{
+   width: 100%;
+   position: relative;
+   top: 3rem;
+  }
+  /* .profilecard .profile .MyPic{
+    height: 5rem;
+    width: 5rem;
+  } */
+}
 /* @media(max-width: 998px) {
   .profilecard{
     position: absolute;

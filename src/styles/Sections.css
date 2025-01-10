@@ -7,13 +7,15 @@ main{
     right: 0;
 }
 main h3{
-    font-size: 2rem;
+    font-size: clamp(1.5rem, calc(.5vw + 1.5rem), 3rem);;
     margin-bottom: 1rem;
 }
 
-/* @media(max-width: 570px) {
+@media(max-width: 570px) {
    main{
     width: 100%;
-    top: 18.5rem;
+    position: relative;
+    top: 3.5rem;
+    padding: 0rem;
    }
-} */
+}
