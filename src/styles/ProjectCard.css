@@ -67,8 +67,8 @@
     margin: 0 .2rem;
 }
 
-@media(max-width: 570px) {
+/* @media(max-width: 570px) {
   .project-card{
     width: 24rem;
   }
-}
+} */

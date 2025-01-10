@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Sections from "./components/Sections";
 import "./App.css";
-import Footer from "./components/Footer";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -14,7 +13,6 @@ function App() {
           activeSection={activeSection}
           setActiveSection={setActiveSection}
         />
-        <Footer />
       </div>
     </>
   );
