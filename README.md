@@ -13,6 +13,12 @@ You can view the live version of my portfolio website here: [Live Link](#) -->
 - Detailed sections for skills, projects, and contact information
 - Social media links and contact form
 
+## Updates 
+- Adding Preloader
+- Dark / Light Mode
+- Background animation
+- Some styling bugs fix
+
 ## Technologies Used
 
 - **React.js**

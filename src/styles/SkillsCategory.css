@@ -39,6 +39,11 @@
   cursor: pointer;
 }
 
+@media(max-width: 998px) {
+  .skills-category{
+    width: 100%;
+  }
+}
 @media(max-width: 570px) {
   .skills-category{
     width: 100%;

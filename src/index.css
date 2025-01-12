@@ -9,15 +9,15 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--bg-color);
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,47 +26,62 @@
 /* .HomeSec{
   height: 70vh;
 } */
-.HomeSec p{
+.HomeSec p {
   line-height: 1.8rem;
-  word-spacing: .1rem;
+  word-spacing: 0.1rem;
   font-size: 1.2rem;
-  color: var(--txt-white)
+  color: var(--txt-white);
 }
-.HomeSec p span{
+.HomeSec p span {
   color: var(--primary-colour);
 }
 
-.project-card-container{
+.project-card-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
 }
 
-footer{
+footer {
   position: absolute;
   right: 4rem;
   display: none;
 }
-
- @media(max-width: 570px) {
-  html {
-      font-size: 85%;
+@media (max-width: 998px) {
+  nav {
+    right: 2rem;
   }
-  footer{
+  .HomeSec p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 570px) {
+  html {
+    font-size: 85%;
+  }
+  .HomeSec p {
+    font-size: 1rem;
+  }
+  .skills-category h4 {
+    font-size: 1.1rem;
+  }
+  .skill-item {
+    font-size: 0.9rem;
+  }
+  .project-card-title {
+    font-size: 1.3rem;
+  }
+  footer {
     display: block;
     right: 1rem;
     bottom: -6rem;
   }
 }
-/*
-@media(max-width: 570px) {
-  .project-card-container{
-    width: 95%;
-  }
-} */
+
 /* @media (prefers-color-scheme: light) {
-  :root {
+:root {
     color: #213547;
     background-color: #ffffff;
   }
