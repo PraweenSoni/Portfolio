@@ -49,13 +49,11 @@ nav ul li {
   list-style: none;
   margin: 0 1rem;
   transition: all 0.2s ease;
-  font-family: "Acme", sans-serif;
 }
 
 nav ul button li svg {
   margin: 0 0.2rem;
 }
-
 
 .setting{
   position: absolute;
@@ -77,7 +75,6 @@ nav ul button:nth-last-child(1):hover .setting{
   color: var(--txt-white);
 }
 .setting .sbox .stheme div{
-  font-family: 'Acme', sans-serif;
   width: 100%;
   border: none;
   border-radius: 0%;
@@ -86,6 +83,11 @@ nav ul button:nth-last-child(1):hover .setting{
   padding: .5rem 0;
   cursor: pointer;
   background-color: var(--bg-color);
+  transition: .2s ease;
+}
+.setting .sbox .stheme div.TActive{
+  color: var(--primary-colour);
+  background-color: #3d3d3d;
 }
 
 .setting .sbox .stheme div:hover{

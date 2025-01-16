@@ -56,12 +56,15 @@
     border: 2px solid var(--black);
     border-radius: .3rem;
     padding: .4rem .7rem;
+    background-color: var(--bg-color);
     cursor: pointer;
     margin-left: .5rem;
 }
 .project-btn a{
     color: var(--white);
-    font-family: 'Acme', sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 .project-btn a svg{
     margin: 0 .2rem;

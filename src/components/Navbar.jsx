@@ -85,7 +85,7 @@ const Navbar = ({ setActiveSection }) => {
               <div className="stheme">
                 <p>Theme</p>
                 <div>System Default</div>
-                <div>Dark Mode</div>
+                <div className="TActive">Dark Mode</div>
                 <div>Light Mode</div>
               </div>
             </div>

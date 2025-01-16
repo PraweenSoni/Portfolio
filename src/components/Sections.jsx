@@ -81,7 +81,7 @@ const ProfileCard = () => {
             <a
               title="Mail"
               aria-label="Mail"
-              href="mailto:ask.psoni@gmail.com"
+              href="mailto:ask.psoni@gmail.com?subject=Feedback%20from%20portfolio&body=Hi,%0A%0A"
               className="mail"
             >
               <IoMdMailUnread />

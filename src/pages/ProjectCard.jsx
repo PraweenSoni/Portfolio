@@ -1,5 +1,6 @@
-import { FaGithub } from "react-icons/fa";
 import "../styles/ProjectCard.css";
+import { FaGithub } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const ProjectCard = (props) => {
   return (
@@ -15,7 +16,7 @@ const ProjectCard = (props) => {
         <p>{props.projectDetails.desc}</p>
         <div className="project-card-actions">
           <button className="project-btn"><a href={props.projectDetails.gLink} target="_blank"><FaGithub />Github</a></button>
-          <button className="project-btn"><a href={props.projectDetails.lLink} target="_blank"><FaGithub />Website</a></button>
+          <button className="project-btn"><a href={props.projectDetails.lLink} target="_blank"><FaArrowUpRightFromSquare />Website</a></button>
         </div>
       </div>
     </div>
