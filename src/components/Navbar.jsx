@@ -7,9 +7,11 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const Navbar = ({ setActiveSection }) => {
   const [isSettingVisible, setIsSettingVisible] = useState(false);
-  const [activeNav, setActiveNav] = useState("Home"); // State for active navigation
+  const [activeNav, setActiveNav] = useState("Home");
   const settingRef = useRef(null);
   const buttonRef = useRef(null);
+  // Theme Code
+  
 
   const toggleSettingVisibility = (e) => {
     e.stopPropagation();
