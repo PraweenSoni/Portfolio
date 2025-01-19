@@ -2,18 +2,26 @@
   --primary-colour: #4bbf87;
   --black: black;
   --white: white;
-  --whitesmoke: whitesmoke;
+  --whitesmoke: rgb(245, 245, 245);
   --bg-color: #2d2e2d;
   --txt-white: #ccc;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: var(--bg-color);
+  color: var(--whitesmoke);
+  /* color: rgba(255, 255, 255, 0.87); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+[theme="light"] {
+  --black: #fff;
+  --white: #000;
+  --whitesmoke: #2d2d2d;
+  --bg-color: #ebf7e3;
+  --txt-white: #2f2f2f;
 }
 
 * {
@@ -23,6 +31,9 @@
   font-family: 'Acme', sans-serif;
 }
 
+body{
+  background-color: var(--bg-color);
+}
 /* .HomeSec{
   height: 70vh;
 } */

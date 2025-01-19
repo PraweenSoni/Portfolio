@@ -44,6 +44,7 @@
 }
 .profilecard div h4 {
   font-size: clamp(1rem, calc(0.4vw + 1rem), 1.8rem);
+  color: var(--white);
 }
 .profilecard div .icons {
   margin-top: calc(1vh);
