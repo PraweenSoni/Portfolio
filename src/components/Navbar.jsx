@@ -11,8 +11,24 @@ const Navbar = ({ setActiveSection }) => {
   const settingRef = useRef(null);
   const buttonRef = useRef(null);
   // Theme Code
-  
+  const setDarkMode = () => {
+    document.querySelector("body").setAttribute('theme', 'dark');
+    localStorage.setItem("theme", "dark");
+  }
+  const setLightMode = () => {
+    document.querySelector("body").setAttribute('theme', 'light')
+    localStorage.setItem("theme", "light");
+  }
+  const selectedTheme = localStorage.getItem("theme");
+  if(selectedTheme === "light"){
+    setLightMode();
+  }
+  const autoMode = (e) => {
+    if(e.target.onClick) setLightMode();
+    else setDarkMode();
+  }
 
+  // Theme code end
   const toggleSettingVisibility = (e) => {
     e.stopPropagation();
     setIsSettingVisible((prev) => !prev);
@@ -86,9 +102,9 @@ const Navbar = ({ setActiveSection }) => {
             <div className="sbox">
               <div className="stheme">
                 <p>Theme</p>
-                <div>System Default</div>
-                <div className="TActive">Dark Mode</div>
-                <div>Light Mode</div>
+                <div onClick={autoMode}>System Default</div>
+                <div onClick={setDarkMode} className="TActive">Dark Mode</div>
+                <div onClick={setLightMode}>Light Mode</div>
               </div>
             </div>
           </div>

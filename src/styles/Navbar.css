@@ -21,7 +21,7 @@ nav ul button {
   background-color: transparent;
   color: var(--txt-white);
   backdrop-filter: blur(.7rem);
-  border: 2px solid rgba(255,255,255,.18);
+  border: 2px solid var(--whitesmoke);
 }
 
 nav ul button:nth-last-child(1){
@@ -34,14 +34,14 @@ nav ul button:nth-last-child(1) li svg{
 }
 
 nav ul button:hover {
-  color: #fff;
+  color: var(--white);
   backdrop-filter: blur(1rem);
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
 }
 
 nav ul button.active {
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--white);
+  color: var(--white);
 }
 
 nav ul li {

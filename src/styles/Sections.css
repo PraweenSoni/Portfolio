@@ -9,6 +9,7 @@ main{
 main h3{
     font-size: clamp(1.5rem, calc(.5vw + 1.5rem), 3rem);;
     margin-bottom: 1rem;
+    color: var(--white);
 }
 @media(max-width: 998px) {
    main{
