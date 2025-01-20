@@ -8,32 +8,55 @@ import { IoSettingsOutline } from "react-icons/io5";
 const Navbar = ({ setActiveSection }) => {
   const [isSettingVisible, setIsSettingVisible] = useState(false);
   const [activeNav, setActiveNav] = useState("Home");
+  const [theme, setTheme] = useState(0);
   const settingRef = useRef(null);
   const buttonRef = useRef(null);
-  // Theme Code
-  const setDarkMode = () => {
-    document.querySelector("body").setAttribute('theme', 'dark');
-    localStorage.setItem("theme", "dark");
-  }
-  const setLightMode = () => {
-    document.querySelector("body").setAttribute('theme', 'light')
-    localStorage.setItem("theme", "light");
-  }
-  const selectedTheme = localStorage.getItem("theme");
-  if(selectedTheme === "light"){
-    setLightMode();
-  }
-  const autoMode = (e) => {
-    if(e.target.onClick) setLightMode();
-    else setDarkMode();
-  }
 
-  // Theme code end
+  // Theme-related functions
+  const applyTheme = (mode) => {
+    if(mode === 'auto'){
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+        document.querySelector("body").setAttribute("theme", systemTheme);
+    }else{
+      document.querySelector("body").setAttribute("theme", mode);
+    }
+    localStorage.setItem("theme", mode);
+  };
+
+  const initializeTheme = () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      applyTheme(savedTheme);
+      setTheme(savedTheme === "dark" ? 1 : savedTheme === "light" ? 2 : 0);
+    } else {
+      // Fallback to system theme
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      applyTheme(systemTheme);
+      setTheme(systemTheme === "dark" ? 1 : 2);
+    }
+  };
+  
+  useEffect(() => {
+    initializeTheme();
+  }, []);
+  
+
+  const handleThemeChange = (mode, themeIndex) => {
+    applyTheme(mode);
+    setTheme(themeIndex);
+  };
+
+  // Handle setting visibility toggle
   const toggleSettingVisibility = (e) => {
     e.stopPropagation();
     setIsSettingVisible((prev) => !prev);
   };
 
+  // Close settings if clicked outside
   const handleClickOutside = (event) => {
     if (
       settingRef.current &&
@@ -59,33 +82,21 @@ const Navbar = ({ setActiveSection }) => {
   return (
     <nav>
       <ul>
-        <button
-          className={activeNav === "Home" ? "active" : ""}
-          onClick={() => handleNavClick("Home")}
-        >
-          <li>
-            <HiOutlineHome />
-            Home
-          </li>
-        </button>
-        <button
-          className={activeNav === "Skills" ? "active" : ""}
-          onClick={() => handleNavClick("Skills")}
-        >
-          <li>
-            <FiTool />
-            Skills
-          </li>
-        </button>
-        <button
-          className={activeNav === "Projects" ? "active" : ""}
-          onClick={() => handleNavClick("Projects")}
-        >
-          <li>
-            <FaRegFolderClosed />
-            Projects
-          </li>
-        </button>
+        {["Home", "Skills", "Projects"].map((section) => (
+          <button
+            key={section}
+            className={activeNav === section ? "active" : ""}
+            onClick={() => handleNavClick(section)}
+          >
+            <li>
+              {section === "Home" && <HiOutlineHome />}
+              {section === "Skills" && <FiTool />}
+              {section === "Projects" && <FaRegFolderClosed />}
+              {section}
+            </li>
+          </button>
+        ))}
+
         <button
           ref={buttonRef}
           className={activeNav === "Settings" ? "active" : ""}
@@ -94,20 +105,28 @@ const Navbar = ({ setActiveSection }) => {
           <li>
             <IoSettingsOutline />
           </li>
-          <div
-            className="setting"
-            ref={settingRef}
-            style={{ display: isSettingVisible ? "block" : "none" }}
-          >
-            <div className="sbox">
-              <div className="stheme">
-                <p>Theme</p>
-                <div onClick={autoMode}>System Default</div>
-                <div onClick={setDarkMode} className="TActive">Dark Mode</div>
-                <div onClick={setLightMode}>Light Mode</div>
+          {isSettingVisible && (
+            <div className="setting" ref={settingRef}>
+              <div className="sbox">
+                <div className="stheme">
+                  <p>Theme</p>
+                  {[
+                    { label: "System Default", mode: "auto", index: 0 },
+                    { label: "Dark Mode", mode: "dark", index: 1 },
+                    { label: "Light Mode", mode: "light", index: 2 },
+                  ].map(({ label, mode, index }) => (
+                    <div
+                      key={mode}
+                      onClick={() => handleThemeChange(mode, index)}
+                      className={theme === index ? "TActive" : ""}
+                    >
+                      {label}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </button>
       </ul>
     </nav>
