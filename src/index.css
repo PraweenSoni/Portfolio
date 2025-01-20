@@ -1,11 +1,11 @@
 :root {
   --primary-colour: #4bbf87;
-  --black: black;
-  --white: white;
+  --black: #000;
+  --white: #fff;
   --whitesmoke: rgb(245, 245, 245);
   --bg-color: #2d2e2d;
   --txt-white: #ccc;
-
+  --btn-color: #3d3d3d;
   color-scheme: light dark;
   color: var(--whitesmoke);
   /* color: rgba(255, 255, 255, 0.87); */
@@ -22,6 +22,7 @@
   --whitesmoke: #2d2d2d;
   --bg-color: #ebf7e3;
   --txt-white: #2f2f2f;
+  --btn-color: #d1d1d1;
 }
 
 * {
