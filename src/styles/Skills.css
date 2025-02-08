@@ -24,6 +24,7 @@
 
 .skills-section {
   transition: 0.1s;
+  user-select: none;
 }
 
 .section-title {

@@ -3,7 +3,7 @@ import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import "../styles/Sections.css";
 import Footer from "./Footer";
-import { useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 // Icons
 import myPic from "/pic.png";
@@ -14,9 +14,7 @@ import { SiLeetcode } from "react-icons/si";
 import { IoMdMailUnread } from "react-icons/io";
 import { TbFileDownload } from "react-icons/tb";
 
-
-const Sections = ({ activeSection}) => {
-
+const Sections = ({ activeSection }) => {
   return (
     <>
       <header>
@@ -40,7 +38,7 @@ const ProfileCard = () => {
         <img src={myPic} className="MyPic" alt="My Picture" />
         <div>
           <h2>Praween Soni</h2>
-          <h4 id="intro">Web Developer</h4>
+          <h4 id="intro">Web developer</h4>
           <div className="icons">
             <a
               title="Instagram"
@@ -119,6 +117,5 @@ const ProfileCard = () => {
     </div>
   );
 };
-
 
 export default Sections;

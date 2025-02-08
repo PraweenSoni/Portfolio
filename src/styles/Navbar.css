@@ -20,7 +20,7 @@ nav ul button {
   background-color: transparent;
   color: var(--txt-white);
   backdrop-filter: blur(.7rem);
-  border: 2px solid var(--txt-white);
+  border: 2px solid #727272;
 }
 
 nav ul button:nth-last-child(1){
@@ -91,7 +91,7 @@ nav ul button:nth-last-child(1):hover .setting{
 
 .setting .sbox .stheme div:hover{
   background-color: var(--btn-color);
-  color: var(--primary-colour);
+  /* color: var(--txt-white); */
 }
 @media(max-width: 570px) {
   nav{
