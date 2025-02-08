@@ -7,7 +7,6 @@ const Skills = () => {
   const topSkills = [
     "JavaScript",
     "Java",
-    "C++",
   ];
   const programmingLanguages = [
     "JavaScript",
