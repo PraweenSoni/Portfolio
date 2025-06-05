@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsCategory from "./SkillsCategory";
+import SkillsCategory from "../components/SkillsCategory";
 import "../styles/Skills.css";
 import { IoDiamondOutline } from "react-icons/io5";
 
@@ -7,21 +7,25 @@ const Skills = () => {
   const topSkills = [
     "JavaScript",
     "Java",
+    "Python"
   ];
   const programmingLanguages = [
     "JavaScript",
     "Java",
     "Python",
+    "SQL",
     "C/C++",
     "PHP",
-    "SQL",
   ];
 
   const technologiesFrameworks = [
     "React.js",
+    "React Native",
     "Node.js/Express.js",
+    "Django",
+    "WordPress",
     "MongoDB",
-    "MySQL",
+    "Xampp",
     "Bootstrap",
     "Tailwind CSS",
   ];

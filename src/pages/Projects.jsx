@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import todoimg from "../assets/todoimg.png";
 import wishcard from "../assets/wishcard.png";
 import imgcomp from "../assets/imgcomp.png";
