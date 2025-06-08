@@ -113,9 +113,3 @@ nav ul button:nth-last-child(1):hover .setting{
     font-size: .9rem;
   }
 }
-
-/* @media(min-width: 360px) {
-  nav ul li{
-    margin: 0 .3rem;
-  }
-} */

@@ -6,16 +6,16 @@ import { IoDiamondOutline } from "react-icons/io5";
 const Skills = () => {
   const topSkills = [
     "JavaScript",
-    "Java",
-    "Python"
+    "Python",
+    "Java"
   ];
   const programmingLanguages = [
     "JavaScript",
-    "Java",
     "Python",
     "SQL",
-    "C/C++",
     "PHP",
+    "Java",
+    "C/C++",
   ];
 
   const technologiesFrameworks = [
@@ -25,7 +25,6 @@ const Skills = () => {
     "Django",
     "WordPress",
     "MongoDB",
-    "Xampp",
     "Bootstrap",
     "Tailwind CSS",
   ];
@@ -33,8 +32,9 @@ const Skills = () => {
   const developerTools = [
     "Git",
     "GitHub",
-    "Android Studio",
     "Postman",
+    "Xampp",
+    "Android Studio",
   ];
   const shoftSkills = [
     "Communication",

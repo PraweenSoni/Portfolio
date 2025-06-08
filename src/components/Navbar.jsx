@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles/Navbar.css";
 import { HiOutlineHome } from "react-icons/hi";
 import { FiTool } from "react-icons/fi";
@@ -85,17 +85,18 @@ const Navbar = ({ setActiveSection }) => {
         {["Home", "Skills", "Projects"].map((section) => (
           <button
             key={section}
-            className={activeNav === section ? "active" : ""}
+            className={`h-10 ${activeNav === section ? "active" : ""}`}
             onClick={() => handleNavClick(section)}
           >
-            <li>
+            <li className="flex items-center">
               {section === "Home" && <HiOutlineHome />}
               {section === "Skills" && <FiTool />}
               {section === "Projects" && <FaRegFolderClosed />}
-              {section}
+              <span>{section}</span>
             </li>
           </button>
         ))}
+
 
         <button
           ref={buttonRef}
