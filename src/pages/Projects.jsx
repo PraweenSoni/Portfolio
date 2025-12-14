@@ -1,6 +1,7 @@
-import ProjectCard from "./ProjectCard";
-import todoimg from "../assets/todoimg.png";
+import ProjectCard from "../components/ProjectCard";
 import wishcard from "../assets/wishcard.png";
+import chessProject from "../assets/chessProject.jpg";
+import todoimg from "../assets/todoimg.png";
 import imgcomp from "../assets/imgcomp.png";
 import typingbgimg from "../assets/typingbgimg.jpg";
 import urlshortner from "../assets/urlshortner.png";
@@ -12,6 +13,13 @@ const Projects = () => {
     desc: "A simple wishcard project where you can create your card and share it.",
     gLink: "https://github.com/PraweenSoni/happy-Birthday-wishes-card-project-",
     lLink: "http://wishcard.free.nf",
+  };
+  const ChessWeb = {
+    img: chessProject,
+    title: "Chess Game",
+    desc: "Simple Chess game where you can play with your friends and watch there games.",
+    gLink: "https://github.com/PraweenSoni/Chess",
+    lLink: "https://chessapp-pks.onrender.com/",
   };
   const ToDoList = {
     img: todoimg,
@@ -46,6 +54,7 @@ const Projects = () => {
     <>
       <section className="project-card-container">
         <ProjectCard projectDetails={Wishcard} />
+        <ProjectCard projectDetails={ChessWeb} />
         <ProjectCard projectDetails={ToDoList} />
         <ProjectCard projectDetails={ImgComp} />
         <ProjectCard projectDetails={TypingSpeed} />

@@ -1,36 +1,38 @@
 import React from "react";
-import SkillsCategory from "./SkillsCategory";
+import SkillsCategory from "../components/SkillsCategory";
 import "../styles/Skills.css";
 import { IoDiamondOutline } from "react-icons/io5";
 
 const Skills = () => {
   const topSkills = [
     "JavaScript",
-    "Java",
+    "Python",
   ];
   const programmingLanguages = [
     "JavaScript",
-    "Java",
     "Python",
-    "C/C++",
-    "PHP",
     "SQL",
+    "PHP",
+    "C++",
   ];
 
   const technologiesFrameworks = [
     "React.js",
     "Node.js/Express.js",
-    "MongoDB",
+    "React Native",
+    "Django",
     "MySQL",
-    "Bootstrap",
     "Tailwind CSS",
+    "Bootstrap",
+    "WordPress",
   ];
 
   const developerTools = [
     "Git",
     "GitHub",
-    "Android Studio",
     "Postman",
+    "Xampp",
+    "Android Studio",
   ];
   const shoftSkills = [
     "Communication",
@@ -53,7 +55,7 @@ const Skills = () => {
     <section className="skills-section">
       <SkillsCategory title="Top Skills" skills={topSkills} />
       <SkillsCategory title="Programming Languages" skills={programmingLanguages} />
-      <SkillsCategory title="Technologies/Frameworks" skills={technologiesFrameworks} />
+      <SkillsCategory title="Frameworks / Database" skills={technologiesFrameworks} />
       <SkillsCategory title="Developer Tools" skills={developerTools} />
       <SkillsCategory title="Soft Skills" skills={shoftSkills} />
       <SkillsCategory title="IOT" skills={IOT} />

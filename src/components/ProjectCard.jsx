@@ -4,7 +4,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const ProjectCard = (props) => {
   return (
-    <div className="project-card">
+    <div className="project-card group">
       <figure>
         <img
           src={props.projectDetails.img}
@@ -12,7 +12,7 @@ const ProjectCard = (props) => {
         />
       </figure>
       <div className="project-card-body">
-        <h2 className="project-card-title">{props.projectDetails.title} !</h2>
+        <h2 className="project-card-title group-hover:text-[#4bbf87]">{props.projectDetails.title} !</h2>
         <p>{props.projectDetails.desc}</p>
         <div className="project-card-actions">
           <button className="project-btn"><a href={props.projectDetails.gLink} target="_blank"><FaGithub />Github</a></button>

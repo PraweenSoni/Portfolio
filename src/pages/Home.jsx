@@ -3,7 +3,7 @@ const Home = () => {
     <>
       <section className="HomeSec">
         <p>
-          Hi! I'm final-year <span>B.Sc. Computer Applications student at DSPMU, Ranchi</span>. I have a passion for <span>full stack web development</span>, specializing in both front-end and back-end technologies. I enjoy creating functional, user-friendly websites.
+          Hi, I am a <span>B.Sc. Computer Applications graduate from DSPMU, Ranchi</span>. I have a passion for <span>full stack web development</span>, specializing in both front-end and back-end technologies. I enjoy creating functional, user-friendly websites.
           <br /> <br />
           Beyond web development, I'm constantly exploring new tools and frameworks to enhance my skills. I'm also interested in working on <span>IoT projects</span>, combining technology with innovation to solve real-world problems. Currently I haven't worked on paid projects, but I've created some projects that include <span>responsive Designs</span> and <span>creative web interface</span>.
           <br /> <br />

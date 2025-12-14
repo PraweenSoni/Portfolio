@@ -36,6 +36,7 @@
 
 .skill-item:hover {
   background-color: var(--black);
+  color: var(--primary-colour);
   cursor: pointer;
 }
 

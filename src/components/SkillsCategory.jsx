@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/SkillsCategory.css";
 
 const SkillsCategory = ({ title, skills }) => {

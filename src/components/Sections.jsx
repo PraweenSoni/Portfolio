@@ -90,8 +90,8 @@ const ProfileCard = () => {
       <div className="otherDetails">
         <div className="other">
           <div>
-            <span>Student :</span>
-            <p>Final Year</p>
+            <span>Graduate :</span>
+            <p>(2025)</p>
           </div>
           <div>
             <span>Language :</span>
@@ -101,14 +101,14 @@ const ProfileCard = () => {
         <div className="resumeBtn">
           <span>
             <a
-              href="Praween resume.pdf"
+              href="PRAWEEN SONI RESUME.pdf"
               download="Praween Resume"
               className="btn"
             >
               <span className="text-1 center">MY RESUME</span>
               <span className="text-2 center">
                 <TbFileDownload />
-                Size (170 KB)
+                Size (569 KB)
               </span>
             </a>
           </span>
