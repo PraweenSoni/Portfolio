@@ -90,8 +90,8 @@ const ProfileCard = () => {
       <div className="otherDetails">
         <div className="other">
           <div>
-            <span>Student :</span>
-            <p>Final Year</p>
+            <span>Graduate :</span>
+            <p>(2025)</p>
           </div>
           <div>
             <span>Language :</span>

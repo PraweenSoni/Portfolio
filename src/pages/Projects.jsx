@@ -19,7 +19,7 @@ const Projects = () => {
     title: "Chess Game",
     desc: "Simple Chess game where you can play with your friends and watch there games.",
     gLink: "https://github.com/PraweenSoni/Chess",
-    lLink: "#",
+    lLink: "https://chessapp-pks.onrender.com/",
   };
   const ToDoList = {
     img: todoimg,

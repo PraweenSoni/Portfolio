@@ -7,26 +7,24 @@ const Skills = () => {
   const topSkills = [
     "JavaScript",
     "Python",
-    "Java"
   ];
   const programmingLanguages = [
     "JavaScript",
     "Python",
     "SQL",
     "PHP",
-    "Java",
-    "C/C++",
+    "C++",
   ];
 
   const technologiesFrameworks = [
     "React.js",
-    "React Native",
     "Node.js/Express.js",
+    "React Native",
     "Django",
-    "WordPress",
-    "MongoDB",
-    "Bootstrap",
+    "MySQL",
     "Tailwind CSS",
+    "Bootstrap",
+    "WordPress",
   ];
 
   const developerTools = [
@@ -57,7 +55,7 @@ const Skills = () => {
     <section className="skills-section">
       <SkillsCategory title="Top Skills" skills={topSkills} />
       <SkillsCategory title="Programming Languages" skills={programmingLanguages} />
-      <SkillsCategory title="Technologies/Frameworks" skills={technologiesFrameworks} />
+      <SkillsCategory title="Frameworks / Database" skills={technologiesFrameworks} />
       <SkillsCategory title="Developer Tools" skills={developerTools} />
       <SkillsCategory title="Soft Skills" skills={shoftSkills} />
       <SkillsCategory title="IOT" skills={IOT} />
