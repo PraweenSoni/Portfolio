@@ -108,7 +108,7 @@ const ProfileCard = () => {
               <span className="text-1 center">MY RESUME</span>
               <span className="text-2 center">
                 <TbFileDownload />
-                Size (569 KB)
+                Size (66 KB)
               </span>
             </a>
           </span>
