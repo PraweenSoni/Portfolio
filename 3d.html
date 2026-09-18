@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Praween Soni — Full Stack Developer</title>
+<meta name="description" content="Portfolio of Praween Soni, a full-stack developer building modern web applications, APIs, mobile apps, SaaS platforms and IoT systems." />
+<meta name="author" content="Praween Soni" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#04060B" />
+<meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://praweensoni.dev/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Praween Soni" />
+<meta property="og:title" content="Praween Soni — Full Stack Developer" />
+<meta property="og:description" content="Portfolio of Praween Soni, a full-stack developer building modern web applications, APIs, mobile apps, SaaS platforms and IoT systems." />
+<meta property="og:url" content="https://praweensoni.dev/" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Praween Soni — Full Stack Developer" />
+<meta name="twitter:description" content="Full-stack developer building web apps, APIs, mobile apps, SaaS platforms and IoT systems." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304060B'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' fill='%2345D6FF' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Praween Soni",
+  "alternateName": "Pks",
+  "jobTitle": "Full Stack Developer",
+  "description": "Full-stack developer building modern web applications, APIs, mobile apps, SaaS platforms and IoT systems.",
+  "knowsAbout": ["React","Next.js","Django","FastAPI","Node.js","React Native","Flutter","MySQL","WebSockets","Three.js","IoT"],
+  "url": "https://praweensoni.dev/"
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  if (window.tailwind) tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#04060B', carbon: '#0A0E16', steel: '#131A26',
+          ice: '#E6EEF9', slate2: '#8496AE',
+          cyan2: '#45D6FF', indigo2: '#5B7BFF', violet2: '#9B6BFF'
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"','system-ui','sans-serif'],
+          body: ['Inter','system-ui','sans-serif'],
+          mono: ['"JetBrains Mono"','ui-monospace','monospace']
+        }
+      }
+    }
+  };
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+:root{
+  --void:#04060B; --carbon:#0A0E16; --steel:#131A26;
+  --ice:#E6EEF9; --slate:#8496AE; --dim:#5D6E85;
+  --cyan:#45D6FF; --indigo:#5B7BFF; --violet:#9B6BFF;
+  --stroke:rgba(129,178,235,.14); --stroke-2:rgba(129,178,235,.30);
+  --glass:rgba(140,180,235,.045);
+  --shell:1240px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --void:#04060B; --carbon:#0A0E16; --steel:#131A26;
+    --ice:#E6EEF9; --slate:#8496AE; --dim:#5D6E85;
+    --cyan:#45D6FF; --indigo:#5B7BFF; --violet:#9B6BFF;
+    --stroke:rgba(129,178,235,.14); --stroke-2:rgba(129,178,235,.30);
+    --glass:rgba(140,180,235,.045);
+  }
+}
+:root[data-theme="dark"]{
+  --void:#04060B; --carbon:#0A0E16; --steel:#131A26;
+  --ice:#E6EEF9; --slate:#8496AE; --dim:#5D6E85;
+  --cyan:#45D6FF; --indigo:#5B7BFF; --violet:#9B6BFF;
+  --stroke:rgba(129,178,235,.14); --stroke-2:rgba(129,178,235,.30);
+  --glass:rgba(140,180,235,.045);
+}
+
+*{ -webkit-tap-highlight-color: transparent; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--void); color:var(--ice);
+  font-family:Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body.locked{ overflow:hidden; }
+::selection{ background:rgba(69,214,255,.28); color:#fff; }
+
+h1,h2,h3,h4{ font-family:"Space Grotesk",system-ui,sans-serif; letter-spacing:-.025em; margin:0; }
+p{ margin:0; }
+
+/* ---------- layout ---------- */
+.shell{ width:min(100% - 2.5rem, var(--shell)); margin-inline:auto; }
+.sec{ position:relative; padding:9rem 0; z-index:2; }
+@media (max-width:800px){ .sec{ padding:6rem 0; } }
+.sec-head{ max-width:44rem; }
+.sec-title{ font-size:clamp(2.1rem,5vw,3.4rem); font-weight:600; line-height:1.03; }
+.sec-sub{ color:var(--slate); margin-top:1.1rem; font-size:1.02rem; line-height:1.7; max-width:38rem; }
+.idx{ font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--cyan);
+  opacity:.75; letter-spacing:.14em; display:block; margin-bottom:1rem; }
+
+/* ---------- glass ---------- */
+.glass{
+  position:relative;
+  background:linear-gradient(150deg, rgba(150,190,255,.07), rgba(120,160,230,.02) 55%, rgba(155,107,255,.045));
+  border:1px solid var(--stroke);
+  border-radius:20px;
+  backdrop-filter:blur(16px) saturate(130%);
+  -webkit-backdrop-filter:blur(16px) saturate(130%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 24px 60px -30px rgba(0,0,0,.9);
+}
+.glass::after{
+  content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(120deg, transparent 30%, rgba(69,214,255,.22), transparent 70%);
+  opacity:0; transition:opacity .45s ease; mix-blend-mode:screen;
+}
+.glass:hover::after{ opacity:1; }
+
+/* ---------- buttons ---------- */
+.btn{
+  position:relative; display:inline-flex; align-items:center; gap:.6rem;
+  padding:.92rem 1.5rem; border-radius:12px; font-size:.92rem; font-weight:500;
+  border:1px solid var(--stroke-2); color:var(--ice); background:var(--glass);
+  cursor:pointer; transition:border-color .3s, background .3s, color .3s;
+  backdrop-filter:blur(10px); will-change:transform;
+}
+.btn:hover{ border-color:rgba(69,214,255,.55); background:rgba(69,214,255,.09); }
+.btn-primary{
+  background:linear-gradient(120deg,#45D6FF,#5B7BFF 60%,#9B6BFF);
+  color:#02060E; border-color:transparent; font-weight:600;
+  box-shadow:0 14px 40px -16px rgba(69,214,255,.75);
+}
+.btn-primary:hover{ background:linear-gradient(120deg,#67dfff,#7390ff 60%,#ad84ff); color:#02060E; }
+.btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--cyan); outline-offset:3px;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:60; height:74px;
+  display:flex; align-items:center;
+  transition:background .4s ease, border-color .4s ease, backdrop-filter .4s;
+  border-bottom:1px solid transparent;
+}
+.nav.stuck{
+  background:rgba(4,6,11,.62); border-bottom-color:var(--stroke);
+  backdrop-filter:blur(18px) saturate(140%); -webkit-backdrop-filter:blur(18px);
+}
+.brand{ font-family:"Space Grotesk"; font-weight:700; font-size:1.18rem; letter-spacing:-.03em; color:var(--ice); text-decoration:none; }
+.brand span{ color:var(--cyan); }
+.navlinks{ position:relative; display:flex; gap:.35rem; }
+.navlink{
+  position:relative; padding:.5rem .85rem; font-size:.875rem; color:var(--slate);
+  text-decoration:none; transition:color .3s; border-radius:8px;
+}
+.navlink:hover{ color:var(--ice); }
+.navlink.active{ color:var(--ice); }
+#navpill{
+  position:absolute; height:100%; top:0; left:0; border-radius:9px;
+  background:rgba(120,170,235,.10); border:1px solid var(--stroke);
+  opacity:0; pointer-events:none;
+}
+.burger{ width:44px; height:44px; display:none; place-items:center; border-radius:11px;
+  border:1px solid var(--stroke); background:var(--glass); }
+.burger i{ display:block; width:17px; height:1.5px; background:var(--ice); border-radius:2px; transition:transform .38s cubic-bezier(.65,0,.35,1), opacity .25s; }
+.burger i+i{ margin-top:5px; }
+.burger.open i:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+.burger.open i:nth-child(2){ opacity:0; }
+.burger.open i:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+.mobilemenu{
+  position:fixed; inset:0; z-index:55; background:rgba(4,6,11,.90);
+  backdrop-filter:blur(26px); display:flex; flex-direction:column;
+  justify-content:center; padding:0 2rem; gap:.25rem;
+  clip-path:inset(0 0 100% 0); pointer-events:none;
+}
+.mobilemenu.open{ pointer-events:auto; }
+.mobilemenu a{
+  font-family:"Space Grotesk"; font-size:2rem; font-weight:500; color:var(--ice);
+  text-decoration:none; padding:.55rem 0; border-bottom:1px solid var(--stroke);
+  display:flex; justify-content:space-between; align-items:baseline;
+}
+.mobilemenu a small{ font-family:"JetBrains Mono"; font-size:.7rem; color:var(--cyan); opacity:.6; }
+@media (max-width:980px){ .navlinks, .nav .btn{ display:none; } .burger{ display:grid; } }
+
+/* ---------- canvas / progress / cursor ---------- */
+#world{ position:fixed; inset:0; z-index:0; pointer-events:none; }
+#fx{ position:fixed; inset:0; z-index:40; pointer-events:none; }
+.vignette{
+  position:fixed; inset:0; z-index:1; pointer-events:none;
+  background:radial-gradient(120% 85% at 50% 40%, transparent 35%, rgba(4,6,11,.72) 100%);
+}
+#progress{ position:fixed; top:0; left:0; height:2px; width:0; z-index:70;
+  background:linear-gradient(90deg,#45D6FF,#5B7BFF,#9B6BFF); box-shadow:0 0 12px rgba(69,214,255,.8); }
+#dot,#ring{ position:fixed; top:0; left:0; z-index:90; pointer-events:none; will-change:transform; }
+#dot{ width:6px; height:6px; margin:-3px 0 0 -3px; border-radius:50%; background:var(--cyan); box-shadow:0 0 12px var(--cyan); }
+#ring{
+  width:64px; height:64px; margin:-32px 0 0 -32px; border-radius:50%;
+  border:1px solid rgba(69,214,255,.45); background:rgba(69,214,255,.07);
+  backdrop-filter:blur(3px); display:grid; place-items:center;
+  font-family:"JetBrains Mono"; font-size:.6rem; letter-spacing:.14em; color:var(--cyan);
+  transform:scale(0); opacity:0;
+}
+@media (hover:none),(pointer:coarse){ #dot,#ring{ display:none !important; } }
+
+/* ---------- loader ---------- */
+#loader{
+  position:fixed; inset:0; z-index:100; background:var(--void);
+  display:grid; place-items:center; gap:1rem;
+}
+#loader .wrap{ text-align:center; }
+#loader .lt{ font-family:"JetBrains Mono"; font-size:.78rem; letter-spacing:.24em; color:var(--cyan); }
+#loader .bar{ width:210px; height:1.5px; background:rgba(129,178,235,.18); margin:1.2rem auto 0; overflow:hidden; }
+#loader .bar i{ display:block; height:100%; width:0; background:linear-gradient(90deg,#45D6FF,#9B6BFF); }
+
+/* ---------- hero ---------- */
+.hero{ min-height:100svh; display:flex; align-items:center; padding-top:74px; position:relative; z-index:2; }
+.hero h1{
+  font-size:clamp(2.6rem,6.6vw,5.3rem); font-weight:600; line-height:.98; letter-spacing:-.04em;
+  max-width:14ch;
+}
+.hero .lede{ color:var(--slate); font-size:1.05rem; line-height:1.72; max-width:34rem; margin-top:1.6rem; }
+.kicker{ display:inline-flex; align-items:center; gap:.6rem; font-family:"JetBrains Mono";
+  font-size:.72rem; letter-spacing:.16em; color:var(--slate);
+  border:1px solid var(--stroke); border-radius:999px; padding:.42rem .9rem; background:var(--glass); }
+.pulse{ width:6px; height:6px; border-radius:50%; background:#3ddc97; box-shadow:0 0 10px #3ddc97; animation:pulse 2.4s infinite; }
+@keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.25 } }
+.scrollcue{ position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
+  font-family:"JetBrains Mono"; font-size:.65rem; letter-spacing:.2em; color:var(--dim); }
+.scrollcue i{ display:block; width:1px; height:34px; margin:.6rem auto 0; background:linear-gradient(var(--cyan),transparent); }
+
+/* ---------- misc components ---------- */
+.stat{ padding:1.6rem 1.5rem; }
+.stat .n{ font-family:"Space Grotesk"; font-size:clamp(2rem,4vw,2.9rem); font-weight:600;
+  background:linear-gradient(120deg,#E6EEF9,#45D6FF); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.stat .l{ font-family:"JetBrains Mono"; font-size:.7rem; letter-spacing:.12em; color:var(--slate); margin-top:.35rem; }
+.tilt{ transform-style:preserve-3d; transition:transform .5s cubic-bezier(.2,.8,.3,1); will-change:transform; }
+
+.chip{ font-family:"JetBrains Mono"; font-size:.68rem; padding:.3rem .62rem; border-radius:7px;
+  border:1px solid var(--stroke); color:var(--slate); background:rgba(140,180,235,.05); white-space:nowrap; }
+.chip.on{ color:var(--cyan); border-color:rgba(69,214,255,.4); background:rgba(69,214,255,.09); }
+
+#tip{
+  position:fixed; z-index:45; pointer-events:none; opacity:0; max-width:15rem;
+  padding:.8rem .95rem; border-radius:13px; transform:translate(-50%,-125%);
+}
+#tip h5{ font-family:"Space Grotesk"; font-size:.95rem; font-weight:600; margin:0 0 .25rem; }
+#tip p{ font-size:.76rem; color:var(--slate); line-height:1.5; }
+#tip .meter{ height:2px; background:rgba(129,178,235,.2); border-radius:2px; margin-top:.6rem; overflow:hidden; }
+#tip .meter i{ display:block; height:100%; background:linear-gradient(90deg,#45D6FF,#9B6BFF); }
+
+/* skills stage */
+.stage{ position:relative; height:min(78vh,640px); }
+.stage .legend{ position:absolute; bottom:0; left:0; display:flex; gap:.4rem; flex-wrap:wrap; }
+.stage .hint{ position:absolute; bottom:0; right:0; font-family:"JetBrains Mono"; font-size:.68rem; color:var(--dim); }
+
+/* projects */
+.pcard{ position:relative; overflow:hidden; padding:1.6rem; cursor:pointer; perspective:900px; }
+.pcard .mock{ border-radius:13px; overflow:hidden; border:1px solid var(--stroke); background:#070B12;
+  transition:transform .6s cubic-bezier(.2,.8,.3,1); }
+.pcard:hover .mock{ transform:translateZ(40px) translateY(-8px); }
+.pcard .num{ font-family:"JetBrains Mono"; font-size:.68rem; color:var(--cyan); letter-spacing:.14em; }
+.pcard h3{ font-size:1.5rem; font-weight:600; margin-top:.5rem; }
+.pcard .desc{ color:var(--slate); font-size:.9rem; line-height:1.65; margin-top:.5rem; }
+.pcard .glowline{ position:absolute; inset:auto 0 0 0; height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent); opacity:0; transition:opacity .4s; }
+.pcard:hover .glowline{ opacity:.9; }
+
+/* detail overlay */
+#detail{ position:fixed; inset:0; z-index:80; display:none; overflow-y:auto;
+  background:rgba(3,5,10,.82); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); }
+#detail.open{ display:block; }
+#detail .inner{ width:min(100% - 2rem, 1100px); margin:6rem auto; }
+.dclose{ position:fixed; top:1.5rem; right:1.5rem; z-index:2; width:46px; height:46px; border-radius:50%;
+  display:grid; place-items:center; border:1px solid var(--stroke-2); background:rgba(10,14,22,.8); color:var(--ice); }
+.spec{ display:flex; gap:1rem; padding:.9rem 0; border-bottom:1px solid var(--stroke); }
+.spec b{ font-family:"JetBrains Mono"; font-size:.7rem; letter-spacing:.1em; color:var(--cyan); min-width:8.5rem; font-weight:500; padding-top:.15rem; }
+.spec span{ color:var(--slate); font-size:.9rem; line-height:1.6; }
+
+/* timeline */
+.tl{ position:relative; }
+.tnode{ position:relative; padding-left:3.4rem; padding-bottom:2.2rem; cursor:pointer; }
+.tnode:last-child{ padding-bottom:0; }
+.tnode .rail{ position:absolute; left:15px; top:26px; bottom:-4px; width:1px;
+  background:linear-gradient(rgba(69,214,255,.45), rgba(69,214,255,.05)); }
+.tnode:last-child .rail{ display:none; }
+.tnode .bulb{ position:absolute; left:6px; top:10px; width:19px; height:19px; border-radius:50%;
+  border:1px solid rgba(69,214,255,.5); display:grid; place-items:center; background:var(--void); transition:box-shadow .4s; }
+.tnode .bulb::after{ content:""; width:7px; height:7px; border-radius:50%; background:var(--cyan); transition:transform .4s; }
+.tnode.on .bulb{ box-shadow:0 0 0 5px rgba(69,214,255,.09), 0 0 22px rgba(69,214,255,.5); }
+.tnode.on .bulb::after{ transform:scale(1.35); }
+.tnode h3{ font-size:1.25rem; font-weight:600; }
+.tnode .yr{ font-family:"JetBrains Mono"; font-size:.7rem; color:var(--cyan); letter-spacing:.12em; }
+.tbody{ overflow:hidden; height:0; }
+
+/* code lab */
+.term{ border-radius:18px; overflow:hidden; border:1px solid var(--stroke); background:rgba(6,9,15,.86);
+  box-shadow:0 50px 100px -50px rgba(69,214,255,.35), inset 0 1px 0 rgba(255,255,255,.05); }
+.termbar{ display:flex; align-items:center; gap:.55rem; padding:.8rem 1rem; border-bottom:1px solid var(--stroke); background:rgba(140,180,235,.04); }
+.tdot{ width:10px; height:10px; border-radius:50%; }
+.termtabs{ display:flex; gap:.3rem; margin-left:auto; }
+.ttab{ font-family:"JetBrains Mono"; font-size:.7rem; padding:.3rem .65rem; border-radius:7px; color:var(--slate);
+  border:1px solid transparent; background:none; cursor:pointer; }
+.ttab.on{ color:var(--cyan); border-color:rgba(69,214,255,.35); background:rgba(69,214,255,.08); }
+.termbody{ position:relative; padding:1.4rem 1.3rem; min-height:330px; font-family:"JetBrains Mono";
+  font-size:.82rem; line-height:1.8; white-space:pre-wrap; color:#C9D6E6; overflow:hidden; }
+.termbody::after{ content:""; position:absolute; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(180deg, rgba(120,200,255,.05) 0 1px, transparent 1px 3px); }
+.caret{ display:inline-block; width:7px; height:1.05em; background:var(--cyan); vertical-align:-3px; animation:blink 1s steps(2) infinite; }
+@keyframes blink{ 50%{ opacity:0 } }
+.k{ color:#FF7BA8 } .s{ color:#7EE787 } .f{ color:#79C0FF } .c{ color:#5D6E85 } .n{ color:#F0B67F }
+
+/* services */
+.svc3d{ transform:rotateX(11deg) rotateY(-12deg); transition:transform .7s cubic-bezier(.2,.8,.3,1); }
+.svc:hover .svc3d{ transform:rotateX(3deg) rotateY(7deg) translateZ(18px); }
+.svc{ padding:1.7rem 1.5rem; height:100%; display:flex; flex-direction:column; }
+.svc .art{ height:112px; position:relative; margin-bottom:1.2rem; perspective:600px; }
+.svc h3{ font-size:1.12rem; font-weight:600; }
+.svc p{ color:var(--slate); font-size:.86rem; line-height:1.65; margin-top:.45rem; }
+
+/* forms */
+.field{ position:relative; }
+.field input,.field textarea{
+  width:100%; background:rgba(140,180,235,.04); border:1px solid var(--stroke); border-radius:12px;
+  padding:1.45rem .95rem .6rem; color:var(--ice); font-size:.92rem; font-family:inherit;
+  transition:border-color .3s, background .3s;
+}
+.field textarea{ min-height:132px; resize:vertical; }
+.field label{ position:absolute; left:.95rem; top:1.05rem; font-size:.88rem; color:var(--dim);
+  pointer-events:none; transition:all .25s ease; font-family:"JetBrains Mono"; }
+.field input:focus,.field textarea:focus{ border-color:rgba(69,214,255,.5); background:rgba(69,214,255,.05); outline:none; }
+.field input:focus+label,.field textarea:focus+label,
+.field input:not(:placeholder-shown)+label,.field textarea:not(:placeholder-shown)+label{
+  top:.42rem; font-size:.62rem; letter-spacing:.12em; color:var(--cyan);
+}
+.slink{ display:flex; align-items:center; gap:.75rem; padding:.95rem 1.1rem; border-radius:13px;
+  border:1px solid var(--stroke); color:var(--ice); text-decoration:none; background:var(--glass);
+  transition:border-color .3s, background .3s; }
+.slink:hover{ border-color:rgba(69,214,255,.45); background:rgba(69,214,255,.07); }
+.slink span{ font-size:.88rem; } .slink small{ margin-left:auto; color:var(--dim); font-family:"JetBrains Mono"; font-size:.68rem; }
+
+footer{ position:relative; z-index:2; border-top:1px solid var(--stroke); padding:3rem 0 2.4rem; }
+
+[data-reveal]{ opacity:0; }
+.no-motion [data-reveal]{ opacity:1 !important; transform:none !important; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  [data-reveal]{ opacity:1 !important; transform:none !important; }
+  .pulse,.caret{ animation:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ CHROME ============ -->
+<div id="loader"><div class="wrap">
+  <div class="lt" id="ltext">INITIALIZING...</div>
+  <div class="bar"><i id="lbar"></i></div>
+</div></div>
+
+<script>
+  /* failsafe: if a script fails to load, never trap the visitor behind the loader */
+  setTimeout(function(){
+    var l = document.getElementById('loader');
+    if (l && l.style.display !== 'none'){
+      l.style.display = 'none';
+      document.documentElement.classList.add('no-motion');
+      Array.prototype.forEach.call(document.querySelectorAll('[data-hero],[data-reveal]'), function(e){ e.style.opacity = 1; });
+    }
+  }, 4500);
+</script>
+
+<div id="progress"></div>
+<div id="dot"></div><div id="ring"></div>
+<canvas id="world"></canvas>
+<canvas id="fx"></canvas>
+<div class="vignette"></div>
+<div id="tip" class="glass"><h5></h5><p></p><div class="meter"><i></i></div></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="shell flex items-center justify-between">
+    <a href="#home" class="brand" data-cursor="dot">PKS<span>.</span></a>
+    <nav class="navlinks" id="navlinks" aria-label="Primary">
+      <div id="navpill"></div>
+      <a class="navlink" href="#home">Home</a>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#skills">Skills</a>
+      <a class="navlink" href="#projects">Projects</a>
+      <a class="navlink" href="#experience">Experience</a>
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn magnetic hidden md:inline-flex" data-cursor="OPEN" style="padding:.7rem 1.15rem">Let's Talk →</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="mobilemenu" id="mobilemenu">
+  <a href="#home">Home <small>01</small></a>
+  <a href="#about">About <small>02</small></a>
+  <a href="#skills">Skills <small>03</small></a>
+  <a href="#projects">Projects <small>04</small></a>
+  <a href="#experience">Experience <small>05</small></a>
+  <a href="#services">Services <small>06</small></a>
+  <a href="#contact">Contact <small>07</small></a>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" data-cam="hero">
+  <div class="shell grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+    <div>
+      <div class="kicker" data-hero><span class="pulse"></span> Available for freelance &amp; product work</div>
+      <h1 class="mt-6" data-hero>I Build Digital Experiences That Actually Work.</h1>
+      <p class="lede" data-hero>Full-stack developer focused on building modern web applications, mobile apps, APIs, SaaS products and intelligent digital experiences.</p>
+      <div class="flex flex-wrap gap-3 mt-9" data-hero>
+        <a href="#projects" class="btn btn-primary magnetic" data-cursor="VIEW">View My Work →</a>
+        <a href="#contact" class="btn magnetic" data-cursor="OPEN">Let's Connect</a>
+      </div>
+      <div class="flex flex-wrap gap-2 mt-10" data-hero id="herochips"></div>
+    </div>
+    <div class="hidden lg:block" aria-hidden="true"><div style="height:60vh"></div></div>
+  </div>
+  <div class="scrollcue" data-hero>SCROLL<i></i></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about" data-cam="about">
+  <div class="shell grid lg:grid-cols-[1fr_.85fr] gap-14 items-center">
+    <div class="sec-head" data-reveal>
+      <span class="idx">01 / ABOUT</span>
+      <h2 class="sec-title">Behind the Code</h2>
+      <p class="sec-sub">I'm a developer who enjoys turning ideas into real products — from APIs and web applications to mobile apps, SaaS platforms and connected systems.</p>
+      <p class="sec-sub">I care about the parts users never see: clean data models, predictable APIs, and interfaces that stay fast when the feature list grows. Most of what I build starts as a problem someone actually has.</p>
+      <div class="flex flex-wrap gap-2 mt-8">
+        <span class="chip on">Available for work</span>
+        <span class="chip">Remote / Worldwide</span>
+        <span class="chip">India · IST</span>
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="glass tilt p-7" id="idcard" data-cursor="dot">
+        <div class="flex items-start gap-4">
+          <div id="avatar" style="width:74px;height:74px;border-radius:18px;border:1px solid var(--stroke);background:rgba(69,214,255,.05);overflow:hidden;flex:none"></div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:600">Praween Soni</h3>
+            <div style="font-family:'JetBrains Mono';font-size:.72rem;color:var(--cyan);letter-spacing:.1em;margin-top:.25rem">SOFTWARE DEVELOPER</div>
+          </div>
+          <div class="ml-auto" style="font-family:'JetBrains Mono';font-size:.6rem;color:var(--dim);text-align:right">ID · PKS<br>2026</div>
+        </div>
+        <div style="height:1px;background:var(--stroke);margin:1.4rem 0"></div>
+        <div style="font-family:'JetBrains Mono';font-size:.66rem;color:var(--dim);letter-spacing:.14em">BUILDING</div>
+        <ul class="mt-3 grid gap-2" style="list-style:none;padding:0;margin:0">
+          <li class="flex items-center gap-2" style="font-size:.9rem"><b style="color:var(--cyan)">·</b> Web Applications</li>
+          <li class="flex items-center gap-2" style="font-size:.9rem"><b style="color:var(--cyan)">·</b> Mobile Applications</li>
+          <li class="flex items-center gap-2" style="font-size:.9rem"><b style="color:var(--cyan)">·</b> APIs</li>
+          <li class="flex items-center gap-2" style="font-size:.9rem"><b style="color:var(--cyan)">·</b> SaaS Products</li>
+          <li class="flex items-center gap-2" style="font-size:.9rem"><b style="color:var(--cyan)">·</b> IoT Systems</li>
+        </ul>
+        <div style="height:1px;background:var(--stroke);margin:1.4rem 0"></div>
+        <div class="flex items-center justify-between" style="font-family:'JetBrains Mono';font-size:.66rem;color:var(--dim)">
+          <span>Build. Learn. Ship.</span><span style="color:#3ddc97">● ONLINE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="shell mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="stats"></div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="sec" id="skills" data-cam="skills">
+  <div class="shell">
+    <div class="sec-head" data-reveal>
+      <span class="idx">02 / STACK</span>
+      <h2 class="sec-title">My Tech Stack</h2>
+      <p class="sec-sub">Everything orbits the same core. Hover a node to see how I use it and how deep I've gone.</p>
+    </div>
+    <div class="stage mt-8" id="skillstage">
+      <div class="legend" id="skilllegend"></div>
+      <div class="hint">hover a node</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="sec" id="projects" data-cam="deep">
+  <div class="shell">
+    <div class="sec-head" data-reveal>
+      <span class="idx">03 / WORK</span>
+      <h2 class="sec-title">Things I've Built</h2>
+      <p class="sec-sub">Four products, each solving a real problem end to end — data model, API, interface, ship.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-5 mt-14" id="projectgrid"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="sec" id="experience" data-cam="deep">
+  <div class="shell grid lg:grid-cols-[.8fr_1.2fr] gap-14">
+    <div class="sec-head lg:sticky lg:top-32 lg:self-start" data-reveal>
+      <span class="idx">04 / JOURNEY</span>
+      <h2 class="sec-title">My Development Journey</h2>
+      <p class="sec-sub">Five stages, one direction. Open a node to see what changed at each step.</p>
+    </div>
+    <div class="tl" id="timeline" data-reveal></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services" data-cam="deep">
+  <div class="shell">
+    <div class="sec-head" data-reveal>
+      <span class="idx">05 / SERVICES</span>
+      <h2 class="sec-title">What I Can Build</h2>
+      <p class="sec-sub">Pick the part you need, or the whole system from database to deployed interface.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14" id="servicegrid"></div>
+  </div>
+</section>
+
+<!-- ============ CODE LAB ============ -->
+<section class="sec" id="codelab" data-cam="lab">
+  <div class="shell">
+    <div class="sec-head" data-reveal>
+      <span class="idx">06 / LAB</span>
+      <h2 class="sec-title">Inside My Code Lab</h2>
+      <p class="sec-sub">Real patterns from things I've shipped — not snippets copied off a docs page.</p>
+    </div>
+    <div class="term mt-12" data-reveal style="transform:perspective(1600px) rotateX(3deg)">
+      <div class="termbar">
+        <span class="tdot" style="background:#FF6058"></span>
+        <span class="tdot" style="background:#FFBD2E"></span>
+        <span class="tdot" style="background:#28CA42"></span>
+        <span style="font-family:'JetBrains Mono';font-size:.7rem;color:var(--dim);margin-left:.7rem" id="termfile">main.py</span>
+        <div class="termtabs" id="termtabs"></div>
+      </div>
+      <div class="termbody"><code id="termcode"></code><span class="caret"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURRENTLY BUILDING ============ -->
+<section class="sec" id="building" data-cam="lab">
+  <div class="shell grid lg:grid-cols-2 gap-14 items-center">
+    <div data-reveal>
+      <span class="idx">07 / NOW</span>
+      <h2 class="sec-title">Currently Building</h2>
+      <p class="sec-sub">Exploring AI + IoT + Real-Time Applications — sensors that report, models that decide, dashboards that update the instant something changes.</p>
+      <div class="flex flex-wrap gap-2 mt-8" id="nowchips"></div>
+      <div class="flex items-center gap-3 mt-8" style="font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.16em;color:var(--cyan)">
+        <span class="pulse" style="background:var(--cyan);box-shadow:0 0 10px var(--cyan)"></span> BUILDING
+      </div>
+    </div>
+    <div class="glass p-8" data-reveal><div id="assembly" style="height:260px"></div></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact" data-cam="portal">
+  <div class="shell grid lg:grid-cols-[.9fr_1.1fr] gap-14">
+    <div class="sec-head" data-reveal>
+      <span class="idx">08 / CONTACT</span>
+      <h2 class="sec-title">Let's Build Something.</h2>
+      <p class="sec-sub">Have an idea, project or product you want to build? Let's turn it into something real.</p>
+      <div class="grid gap-3 mt-9">
+        <a class="slink magnetic" href="https://github.com/" target="_blank" rel="noopener" data-cursor="OPEN">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>GitHub</span><small>@pks</small>
+        </a>
+        <a class="slink magnetic" href="https://linkedin.com/" target="_blank" rel="noopener" data-cursor="OPEN">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span><small>in/praween</small>
+        </a>
+        <a class="slink magnetic" href="mailto:hello@praweensoni.dev" data-cursor="OPEN">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <span>Email</span><small>hello@praweensoni.dev</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="glass p-7 sm:p-9" data-reveal id="formwrap">
+      <form id="contactform" novalidate>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="field"><input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name"><label for="f-name">Name</label></div>
+          <div class="field"><input id="f-email" name="email" type="email" placeholder=" " required autocomplete="email"><label for="f-email">Email</label></div>
+        </div>
+        <div class="field mt-4"><textarea id="f-msg" name="message" placeholder=" " required></textarea><label for="f-msg">Message</label></div>
+        <div class="flex items-center gap-4 mt-6">
+          <button type="submit" class="btn btn-primary magnetic" data-cursor="OPEN">Send Message →</button>
+          <span id="formnote" style="font-size:.8rem;color:var(--dim)">Replies usually within a day.</span>
+        </div>
+      </form>
+      <div id="formdone" style="display:none;text-align:center;padding:2.5rem 0">
+        <div style="width:58px;height:58px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;border:1px solid rgba(69,214,255,.5);background:rgba(69,214,255,.09)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#45D6FF" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>
+        </div>
+        <h3 style="font-size:1.35rem;font-weight:600">Message sent</h3>
+        <p style="color:var(--slate);font-size:.9rem;margin-top:.5rem">It's through the portal. I'll get back to you shortly.</p>
+        <button class="btn mt-6 magnetic" id="formreset" data-cursor="OPEN">Send another</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="shell flex flex-wrap gap-6 items-center justify-between">
+    <div>
+      <a href="#home" class="brand" data-cursor="dot">PKS<span>.</span></a>
+      <div style="font-family:'JetBrains Mono';font-size:.72rem;color:var(--cyan);letter-spacing:.14em;margin-top:.5rem">Build. Learn. Ship.</div>
+    </div>
+    <nav class="flex gap-6" aria-label="Footer">
+      <a href="#home" style="color:var(--slate);font-size:.86rem;text-decoration:none">Home</a>
+      <a href="#about" style="color:var(--slate);font-size:.86rem;text-decoration:none">About</a>
+      <a href="#projects" style="color:var(--slate);font-size:.86rem;text-decoration:none">Projects</a>
+      <a href="#contact" style="color:var(--slate);font-size:.86rem;text-decoration:none">Contact</a>
+    </nav>
+    <div style="font-family:'JetBrains Mono';font-size:.72rem;color:var(--dim)">© 2026 Praween Soni</div>
+  </div>
+</footer>
+
+<div id="detail" role="dialog" aria-modal="true" aria-label="Project detail">
+  <button class="dclose" id="dclose" aria-label="Close project">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="inner" id="detailinner"></div>
+</div>
+
+<script>
+/* ==========================================================================
+   PKS PORTFOLIO — Praween Soni
+   Vanilla Three.js (r128) + GSAP ScrollTrigger + Tailwind
+   ========================================================================== */
+(function(){
+'use strict';
+
+/* ---------------- environment / capability detection ---------------- */
+const HAS_GSAP = !!(window.gsap && window.ScrollTrigger);
+if (!HAS_GSAP){
+  const tl = { to:r, from:r, fromTo:r, set:r, call:function(f){ f&&f(); return tl; }, add:function(f){ typeof f==='function'&&f(); return tl; } };
+  function r(t, v){ if (v && v.onComplete) v.onComplete(); return tl; }
+  window.gsap = { to:r, from:r, fromTo:r, set:r, timeline:()=>tl, quickTo:()=>(()=>{}), registerPlugin:()=>{}, utils:{ toArray:s=>Array.from(document.querySelectorAll(s)) } };
+  window.ScrollTrigger = { create:()=>{}, refresh:()=>{} };
+}
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches || !HAS_GSAP;
+const TOUCH   = window.matchMedia('(hover:none), (pointer:coarse)').matches;
+const W       = () => window.innerWidth;
+const MOBILE  = W() < 760;
+const TABLET  = W() >= 760 && W() < 1100;
+const CORES   = navigator.hardwareConcurrency || 4;
+const LOWPOW  = MOBILE || CORES <= 4;
+const TIER    = REDUCED ? 0 : (MOBILE ? 1 : (TABLET || LOWPOW ? 2 : 3));  // 0 static → 3 full
+if (REDUCED) document.documentElement.classList.add('no-motion');
+gsap.registerPlugin(ScrollTrigger);
+
+const $  = (s, r) => (r||document).querySelector(s);
+const $$ = (s, r) => Array.from((r||document).querySelectorAll(s));
+const clamp = (v,a,b) => Math.min(b, Math.max(a, v));
+
+/* ---------------- content ---------------- */
+const HERO_CHIPS = ['React','Next.js','Django','FastAPI','React Native','MySQL','WebSockets'];
+
+const STATS = [
+  { n: 20, suffix:'+', label:'PROJECTS BUILT' },
+  { n: 15, suffix:'+', label:'TECHNOLOGIES' },
+  { n: 30, suffix:'+', label:'APIS CREATED' },
+  { text:'AI / ML',    label:'CURRENTLY LEARNING' }
+];
+
+const SKILLS = [
+  { g:'Frontend', n:'React',        d:'Component architecture, hooks, state and data-fetching patterns.', l:.92 },
+  { g:'Frontend', n:'Next.js',      d:'Routing, server rendering and production builds.',                 l:.82 },
+  { g:'Frontend', n:'JavaScript',   d:'The language I reach for first, everywhere.',                      l:.94 },
+  { g:'Frontend', n:'TypeScript',   d:'Typed models and safer refactors on larger codebases.',            l:.72 },
+  { g:'Frontend', n:'HTML',         d:'Semantic, accessible document structure.',                         l:.96 },
+  { g:'Frontend', n:'CSS',          d:'Layout, motion and responsive systems without a framework.',       l:.9  },
+  { g:'Frontend', n:'Tailwind',     d:'Fast, consistent styling across whole products.',                  l:.9  },
+  { g:'Backend',  n:'Django',       d:'Models, auth, admin and full server-rendered products.',           l:.9  },
+  { g:'Backend',  n:'FastAPI',      d:'Async APIs, validation and real-time endpoints.',                  l:.86 },
+  { g:'Backend',  n:'Node.js',      d:'API services and tooling for mobile backends.',                    l:.84 },
+  { g:'Backend',  n:'Express',      d:'Routing, middleware and REST layers.',                             l:.84 },
+  { g:'Backend',  n:'PHP',          d:'Maintaining and extending legacy server code.',                    l:.6  },
+  { g:'Database', n:'MySQL',        d:'Schema design, relations, indexing and query tuning.',             l:.86 },
+  { g:'Database', n:'SQLite',       d:'Local-first storage for prototypes and mobile.',                   l:.78 },
+  { g:'Mobile',   n:'Flutter',      d:'Cross-platform UI with a single Dart codebase.',                   l:.66 },
+  { g:'Mobile',   n:'React Native', d:'Shipped production apps for Android and iOS.',                      l:.86 },
+  { g:'Mobile',   n:'Expo',         d:'Builds, OTA updates and native modules without the pain.',         l:.84 },
+  { g:'Other',    n:'Git',          d:'Branching, reviews and release hygiene.',                          l:.9  },
+  { g:'Other',    n:'REST API',     d:'Versioning, pagination, error contracts, docs.',                   l:.92 },
+  { g:'Other',    n:'JWT',          d:'Token auth, refresh flows and route protection.',                  l:.86 },
+  { g:'Other',    n:'WebSockets',   d:'Live dashboards and device telemetry streams.',                    l:.8  },
+  { g:'Other',    n:'Three.js',     d:'Real-time 3D scenes, materials and camera work.',                  l:.7  },
+  { g:'Other',    n:'Cloudflare',   d:'DNS, caching, tunnels and edge protection.',                       l:.68 }
+];
+const GROUP_COLOR = { Frontend:'#45D6FF', Backend:'#9B6BFF', Database:'#5B7BFF', Mobile:'#3DDC97', Other:'#F0B67F' };
+
+const PROJECTS = [
+  {
+    id:'gk', num:'01', name:'GK Pathshala', mock:'phone',
+    tag:'Mobile app · Education',
+    desc:'Government exam preparation and educational mobile application, built API-first so content ships without an app update.',
+    stack:['React Native','Expo','Node.js','Express','MySQL','REST API'],
+    features:['Articles','Categories','Quiz','User authentication','Profile','API-driven content'],
+    problem:'Exam aspirants were scattered across PDFs, YouTube playlists and Telegram groups. Nothing tracked what they had already studied, and nothing worked offline on a weak connection.',
+    solution:'A single mobile app where every article, category and quiz comes from one API. Editors publish from a dashboard and the content appears instantly in the app — no store release required.',
+    architecture:'React Native (Expo) client → Express REST API → MySQL. JWT auth with refresh tokens, paginated content endpoints, and a normalised category/article/quiz schema so a question can belong to many topics.',
+    highlight:'Content updates ship in seconds instead of waiting on an app-store review.'
+  },
+  {
+    id:'wcw', num:'02', name:'WishCardWorld', mock:'cards',
+    tag:'Web platform · Creator tools',
+    desc:'Digital greeting card creation platform where anyone can design, personalise and share a card in under a minute.',
+    stack:['Django','Python','JavaScript','HTML/CSS','MySQL'],
+    features:['Greeting card templates','Custom designs','User-created cards','Sharing','Premium templates','Subscription system'],
+    problem:'Making a personalised card meant opening a design tool most people do not know how to use, then fighting with export sizes and sharing links.',
+    solution:'A template-first editor in the browser. Pick a design, change the text and photo, and get a shareable link straight away. Premium templates sit behind a subscription.',
+    architecture:'Django templates plus vanilla JS for the editor canvas. MySQL stores templates, user cards and subscription state; rendered cards are cached and served from a short share URL.',
+    highlight:'Template editor and subscription billing in one Django codebase — small surface, easy to maintain.'
+  },
+  {
+    id:'iot', num:'03', name:'IoT Monitoring Platform', mock:'dash',
+    tag:'Real-time system · Hardware',
+    desc:'Real-time monitoring platform for connected devices, from the sensor firmware up to the live dashboard.',
+    stack:['FastAPI','Python','MySQL','WebSockets','ESP32 / ESP8266'],
+    features:['Device monitoring','Real-time updates','Sensor data','Device management','Live dashboard'],
+    problem:'Polling an HTTP endpoint every few seconds is slow, wasteful and still leaves the dashboard behind reality — which is useless when you are watching a temperature climb.',
+    solution:'Devices push readings over a persistent connection; the server fans them out to every open dashboard over WebSockets. What the sensor sees, the screen shows.',
+    architecture:'ESP32/ESP8266 firmware → FastAPI ingest endpoint → WebSocket broadcast hub → browser dashboard. Readings are written to MySQL in batches so history queries never block the live stream.',
+    highlight:'Sub-second sensor-to-screen latency with batched writes behind it.'
+  },
+  {
+    id:'shop', num:'04', name:'E-Commerce Platform', mock:'shop',
+    tag:'Web application · Commerce',
+    desc:'Modern e-commerce application with catalogue, search, reviews and a full admin side.',
+    stack:['Django','Python','MySQL','JavaScript','Tailwind CSS'],
+    features:['Products','Categories','Search','Product details','Reviews','Admin management'],
+    problem:'Off-the-shelf storefronts fight you the moment the catalogue does not match their assumed shape, and the admin side is usually someone else\u2019s idea of your workflow.',
+    solution:'A catalogue built around the store\u2019s actual data model, with search and filtering that stay fast as the product count grows, and an admin built for the people who use it daily.',
+    architecture:'Django with a normalised product/variant/category schema, indexed search over name and attributes, review moderation, and Tailwind for a storefront that stays consistent across templates.',
+    highlight:'Indexed catalogue search that holds up well past the point where naive queries fall over.'
+  }
+];
+
+const TIMELINE = [
+  { t:'Learning',   yr:'STAGE 01', s:'Foundations',
+    b:'Started with HTML, CSS and JavaScript, then Python. Built small things badly, then rebuilt them properly.',
+    tech:['HTML','CSS','JavaScript','Python','Git'],
+    win:'First working CRUD app, deployed and reachable from another device.' },
+  { t:'Building',   yr:'STAGE 02', s:'Real applications',
+    b:'Moved from tutorials to products: Django for the server, React for the interface, MySQL underneath.',
+    tech:['Django','React','MySQL','REST API'],
+    win:'WishCardWorld shipped with templates, accounts and a subscription flow.' },
+  { t:'Freelancing',yr:'STAGE 03', s:'Working with clients',
+    b:'Scoping, estimating and delivering to a deadline — and learning that the hard part is rarely the code.',
+    tech:['Next.js','Tailwind','Node.js','Cloudflare'],
+    win:'Repeat clients and projects handed over with documentation that outlived me.' },
+  { t:'Products',   yr:'STAGE 04', s:'Mobile &amp; SaaS',
+    b:'Full products end to end: React Native apps, subscription platforms and the APIs that feed them.',
+    tech:['React Native','Expo','Express','JWT'],
+    win:'GK Pathshala in users\u2019 hands, with content shipping from an API instead of a release.' },
+  { t:'AI / IoT',   yr:'STAGE 05', s:'Where I am now',
+    b:'Connected devices, real-time streams and models that make a decision instead of just returning a number.',
+    tech:['FastAPI','WebSockets','ESP32','AI / ML'],
+    win:'A live IoT dashboard running on hardware I flashed myself.' }
+];
+
+const SERVICES = [
+  { k:'web',    t:'Web Development',       d:'Modern responsive websites and web applications.' },
+  { k:'api',    t:'Backend & APIs',        d:'REST APIs, authentication, databases and scalable backend systems.' },
+  { k:'mobile', t:'Mobile Development',    d:'Cross-platform applications using React Native and Flutter.' },
+  { k:'saas',   t:'SaaS Development',      d:'Subscription-based platforms, dashboards and business applications.' },
+  { k:'iot',    t:'IoT & Real-Time Systems', d:'Connected devices, dashboards, sensor monitoring and WebSocket-based systems.' }
+];
+
+const LAB = {
+  Python: { file:'main.py', code:
+`@app.get("/api/projects")
+async def projects():
+    return {
+        "developer": "Praween Soni",
+        "projects": projects
+    }` },
+  JavaScript: { file:'developer.js', code:
+`const developer = {
+  name: "Praween Soni",
+  role: "Full Stack Developer",
+  stack: ["React", "Next.js", "Django", "Node.js"],
+  mindset: "Build. Learn. Ship."
+}
+
+export default developer` },
+  API: { file:'stream.py', code:
+`@app.websocket("/ws/devices/{device_id}")
+async def stream(ws: WebSocket, device_id: str):
+    await hub.connect(ws, device_id)
+    try:
+        while True:
+            reading = await ws.receive_json()
+            await hub.broadcast(device_id, reading)
+    except WebSocketDisconnect:
+        hub.disconnect(ws, device_id)` },
+  Database: { file:'schema.sql', code:
+`CREATE TABLE readings (
+  id         BIGINT PRIMARY KEY AUTO_INCREMENT,
+  device_id  VARCHAR(64) NOT NULL,
+  metric     VARCHAR(32) NOT NULL,
+  value      DECIMAL(10,3) NOT NULL,
+  taken_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_device_time (device_id, taken_at)
+);` }
+};
+
+/* ---------------- syntax highlighting for the lab ---------------- */
+const KEYWORDS = /\b(async|await|def|return|const|let|var|export|default|import|from|class|try|except|while|if|else|CREATE|TABLE|PRIMARY|KEY|AUTO_INCREMENT|NOT|NULL|DEFAULT|INDEX|VARCHAR|DECIMAL|BIGINT|TIMESTAMP|CURRENT_TIMESTAMP)\b/;
+function highlight(src){
+  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const re = /("[^"\n]*"|'[^'\n]*')|(#[^\n]*)|(@[\w.]+)|\b(async|await|def|return|const|let|var|export|default|import|from|class|try|except|while|if|else|CREATE|TABLE|PRIMARY|KEY|AUTO_INCREMENT|NOT|NULL|DEFAULT|INDEX|VARCHAR|DECIMAL|BIGINT|TIMESTAMP|CURRENT_TIMESTAMP)\b|(\b\d+(?:\.\d+)?\b)|([A-Za-z_]\w*)(?=\()/g;
+  let out = '', last = 0, m;
+  while ((m = re.exec(src))){
+    out += esc(src.slice(last, m.index));
+    if (m[1])      out += '<i class="s">'+esc(m[1])+'</i>';
+    else if (m[2]) out += '<i class="c">'+esc(m[2])+'</i>';
+    else if (m[3]) out += '<i class="n">'+esc(m[3])+'</i>';
+    else if (m[4]) out += '<i class="k">'+esc(m[4])+'</i>';
+    else if (m[5]) out += '<i class="n">'+esc(m[5])+'</i>';
+    else           out += '<i class="f">'+esc(m[6])+'</i>';
+    last = re.lastIndex;
+  }
+  return out + esc(src.slice(last));
+}
+
+/* ---------------- inline device mockups (no remote assets) ---------------- */
+function mockup(kind){
+  const head = 'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="100%" style="display:block"';
+  const bg = '<rect width="520" height="300" fill="#070B12"/><rect width="520" height="300" fill="url(#g)"/>';
+  const defs = `<defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#45D6FF" stop-opacity=".07"/><stop offset="1" stop-color="#9B6BFF" stop-opacity=".07"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#45D6FF"/><stop offset="1" stop-color="#5B7BFF"/></linearGradient>
+  </defs>`;
+  const bar = (x,y,w,h,o) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h/2}" fill="#8FB6E0" opacity="${o||.25}"/>`;
+  let body = '';
+
+  if (kind === 'phone'){
+    body = `<rect x="196" y="24" width="128" height="252" rx="20" fill="#0B1019" stroke="#2A3B52"/>
+      <rect x="204" y="32" width="112" height="236" rx="14" fill="#060A11"/>
+      <rect x="240" y="38" width="40" height="5" rx="2.5" fill="#1B2637"/>
+      <rect x="212" y="54" width="96" height="30" rx="8" fill="url(#a)" opacity=".22"/>
+      ${bar(220,64,52,5,.55)}${bar(220,73,34,4,.3)}
+      ${[0,1,2].map((i)=>`<rect x="212" y="${94+i*38}" width="96" height="30" rx="8" fill="#0E1624" stroke="#1E2C40"/>
+        ${bar(220,103+i*38,60,4,.4)}${bar(220,112+i*38,40,3.5,.22)}`).join('')}
+      <rect x="212" y="216" width="96" height="42" rx="10" fill="#0E1624" stroke="#243449"/>
+      ${bar(220,226,44,4,.4)}<rect x="220" y="238" width="80" height="6" rx="3" fill="#1A2740"/><rect x="220" y="238" width="52" height="6" rx="3" fill="url(#a)"/>
+      <text x="260" y="292" fill="#5D6E85" font-family="monospace" font-size="9" text-anchor="middle">QUIZ · ARTICLES · PROFILE</text>`;
+  } else if (kind === 'cards'){
+    body = `${[0,1,2,3,4,5].map((i)=>{const x=40+(i%3)*150, y=48+Math.floor(i/3)*112;
+      return `<rect x="${x}" y="${y}" width="130" height="94" rx="10" fill="#0C1320" stroke="#1F2D42"/>
+      <rect x="${x}" y="${y}" width="130" height="40" rx="10" fill="url(#a)" opacity="${.10+i*.035}"/>
+      <circle cx="${x+22}" cy="${y+20}" r="8" fill="#45D6FF" opacity=".5"/>
+      ${bar(x+38,y+16,58,5,.45)}${bar(x+14,y+56,100,4,.3)}${bar(x+14,y+66,72,4,.2)}
+      <rect x="${x+14}" y="${y+76}" width="34" height="9" rx="4.5" fill="#45D6FF" opacity=".22"/>`;}).join('')}
+      ${bar(40,24,90,7,.5)}<rect x="404" y="20" width="76" height="16" rx="8" fill="url(#a)" opacity=".3"/>`;
+  } else if (kind === 'dash'){
+    const pts = [0,1,2,3,4,5,6,7,8,9,10,11].map(i=>`${40+i*38},${200-Math.sin(i*0.8)*38-Math.random()*14}`).join(' ');
+    body = `<rect x="24" y="20" width="472" height="256" rx="12" fill="#0A111C" stroke="#1E2C40"/>
+      ${bar(40,38,84,6,.5)}<circle cx="470" cy="41" r="5" fill="#3DDC97"/><text x="440" y="45" fill="#3DDC97" font-family="monospace" font-size="8" text-anchor="end">LIVE</text>
+      ${[0,1,2].map(i=>`<rect x="${40+i*150}" y="58" width="130" height="52" rx="9" fill="#0D1524" stroke="#1F2D42"/>
+        ${bar(52+i*150,70,40,4,.28)}<text x="${52+i*150}" y="96" fill="#45D6FF" font-family="monospace" font-size="15">${['24.6°','62%','1.2k'][i]}</text>`).join('')}
+      <rect x="40" y="126" width="440" height="128" rx="9" fill="#0D1524" stroke="#1F2D42"/>
+      <polyline points="${pts}" fill="none" stroke="url(#a)" stroke-width="2"/>
+      ${[0,1,2,3].map(i=>`<line x1="40" y1="${150+i*26}" x2="480" y2="${150+i*26}" stroke="#18243A"/>`).join('')}`;
+  } else {
+    body = `<rect x="24" y="20" width="472" height="256" rx="12" fill="#0A111C" stroke="#1E2C40"/>
+      ${bar(40,38,70,6,.5)}<rect x="300" y="32" width="120" height="18" rx="9" fill="#0E1826" stroke="#20304A"/>${bar(310,39,60,4,.25)}
+      <rect x="432" y="32" width="48" height="18" rx="9" fill="url(#a)" opacity=".32"/>
+      ${[0,1,2,3].map(i=>{const x=40+i*112;
+        return `<rect x="${x}" y="70" width="98" height="120" rx="10" fill="#0D1524" stroke="#1F2D42"/>
+        <rect x="${x+10}" y="80" width="78" height="56" rx="7" fill="url(#a)" opacity="${.12+i*.05}"/>
+        ${bar(x+10,146,60,5,.4)}${bar(x+10,158,34,4,.22)}
+        <text x="${x+10}" y="180" fill="#45D6FF" font-family="monospace" font-size="10">$${[29,49,19,89][i]}</text>`;}).join('')}
+      <rect x="40" y="204" width="440" height="50" rx="9" fill="#0D1524" stroke="#1F2D42"/>
+      ${[0,1,2,3,4].map(i=>`<circle cx="${56+i*15}" cy="222" r="5" fill="#F0B67F" opacity=".7"/>`).join('')}
+      ${bar(40,240,300,4,.2)}`;
+  }
+  return `<svg ${head}>${defs}${bg}${body}</svg>`;
+}
+
+/* ==========================================================================
+   3D WORLD — one persistent scene the camera travels through
+   z  0   → hero workstation
+   z -30  → skills constellation
+   z -50  → deep space (projects / experience / services)
+   z -67  → code lab monolith
+   z -80  → contact portal
+   ========================================================================== */
+const World = (function(){
+  if (!window.THREE) return { init(){}, goto(){}, portalBurst(){}, supported:false };
+  const canvas = $('#world');
+  let renderer, scene, camera, clock, raf = 0, running = true;
+  const groups = {};
+  const STATION_Y = MOBILE ? -1.55 : -0.2;
+  const interactive = [];
+  const floaters = [];
+  const mouse = { x:0, y:0, tx:0, ty:0 };
+  const ray = new THREE.Raycaster();
+  const pointer = new THREE.Vector2(-5,-5);
+  let hovered = null, hoverEnabled = false;
+
+  const WAY = {
+    hero:   MOBILE ? { p:new THREE.Vector3(0, 0.5, 6.4),  l:new THREE.Vector3(0, -1.1, -3) }
+                   : { p:new THREE.Vector3(0, 1.15, 9.2), l:new THREE.Vector3(2.4, 0.15, 0) },
+    about:  MOBILE ? { p:new THREE.Vector3(0, 0.4, 5.2),  l:new THREE.Vector3(0, -1.2, -3) }
+                   : { p:new THREE.Vector3(-1.4, 1.0, 6.2),l:new THREE.Vector3(1.6, 0.05, -1) },
+    skills: { p:new THREE.Vector3(0, 0.3, -22.6), l:new THREE.Vector3(0, 0, -30) },
+    deep:   { p:new THREE.Vector3(0, 2.4, -44),   l:new THREE.Vector3(0, 0.5, -52) },
+    lab:    { p:new THREE.Vector3(0, 1.0, -60),   l:new THREE.Vector3(0, 0.5, -67) },
+    portal: { p:new THREE.Vector3(0, 0.2, -73),   l:new THREE.Vector3(0, 0, -80) }
+  };
+  let camPos = WAY.hero.p.clone(), camLook = WAY.hero.l.clone();
+  const curPos = WAY.hero.p.clone(), curLook = WAY.hero.l.clone();
+
+  /* ---------- texture helpers ---------- */
+  function tex(w, h, draw){
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    draw(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c);
+    t.anisotropy = renderer ? renderer.capabilities.getMaxAnisotropy() : 1;
+    t.minFilter = THREE.LinearFilter;
+    return t;
+  }
+  function roundRect(x, rx, ry, w, h, r){
+    x.beginPath();
+    x.moveTo(rx+r, ry); x.arcTo(rx+w, ry, rx+w, ry+h, r); x.arcTo(rx+w, ry+h, rx, ry+h, r);
+    x.arcTo(rx, ry+h, rx, ry, r); x.arcTo(rx, ry, rx+w, ry, r); x.closePath();
+  }
+  function glowSprite(color, size, opacity){
+    const t = tex(128, 128, (x,w)=>{
+      const g = x.createRadialGradient(w/2, w/2, 0, w/2, w/2, w/2);
+      g.addColorStop(0, 'rgba(255,255,255,.95)');
+      g.addColorStop(.25, color);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      x.fillStyle = g; x.fillRect(0,0,w,w);
+    });
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({
+      map:t, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false, opacity: opacity===undefined?.75:opacity
+    }));
+    s.scale.set(size, size, 1);
+    return s;
+  }
+  function label(text, color, scale){
+    const t = tex(384, 96, (x,w,h)=>{
+      x.clearRect(0,0,w,h);
+      x.font = '600 46px "JetBrains Mono", monospace';
+      x.textAlign = 'center'; x.textBaseline = 'middle';
+      x.shadowColor = color; x.shadowBlur = 18;
+      x.fillStyle = '#EAF3FF'; x.fillText(text, w/2, h/2);
+    });
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({ map:t, transparent:true, depthWrite:false }));
+    const k = scale || 1; s.scale.set(1.5*k, .375*k, 1);
+    return s;
+  }
+
+  /* screen texture: code editor */
+  function screenTexture(){
+    const LINES = [
+      ['const ','k'],['developer',''],[' = {','p'],
+      ['  name','key'],[': ','p'],['"Praween Soni"','s'],[',','p'],
+      ['  role','key'],[': ','p'],['"Full Stack Developer"','s'],[',','p'],
+      ['  stack','key'],[': ','p'],['["React", "Next.js", "Django", "Node.js"]','s'],[',','p'],
+      ['  mindset','key'],[': ','p'],['"Build. Learn. Ship."','s'],
+      ['}','p']
+    ];
+    const rows = [
+      [['const ','k'],['developer','v'],[' = {','p']],
+      [['  name','key'],[': ','p'],['"Praween Soni"','s'],[',','p']],
+      [['  role','key'],[': ','p'],['"Full Stack Developer"','s'],[',','p']],
+      [['  stack','key'],[': ','p'],['["React", "Next.js",','s']],
+      [['          "Django", "Node.js"]','s'],[',','p']],
+      [['  mindset','key'],[': ','p'],['"Build. Learn. Ship."','s']],
+      [['}','p']],
+      [],
+      [['// shipping since day one','c']]
+    ];
+    const COL = { k:'#FF7BA8', v:'#E6EEF9', key:'#79C0FF', s:'#7EE787', p:'#8496AE', c:'#5D6E85' };
+    return tex(1024, 576, (x,w,h)=>{
+      x.fillStyle = '#070B12'; x.fillRect(0,0,w,h);
+      const g = x.createLinearGradient(0,0,w,h);
+      g.addColorStop(0,'rgba(69,214,255,.08)'); g.addColorStop(1,'rgba(155,107,255,.08)');
+      x.fillStyle = g; x.fillRect(0,0,w,h);
+      // title bar
+      x.fillStyle = 'rgba(140,180,235,.06)'; x.fillRect(0,0,w,64);
+      ['#FF6058','#FFBD2E','#28CA42'].forEach((c,i)=>{ x.fillStyle=c; x.beginPath(); x.arc(38+i*30, 32, 8, 0, 7); x.fill(); });
+      x.font = '400 22px "JetBrains Mono", monospace'; x.fillStyle = '#5D6E85';
+      x.fillText('developer.js', 150, 40);
+      // gutter
+      x.fillStyle = 'rgba(0,0,0,.35)'; x.fillRect(0,64,74,h-64);
+      x.font = '400 30px "JetBrains Mono", monospace';
+      rows.forEach((row,i)=>{
+        const y = 128 + i*48;
+        x.fillStyle = '#31415A'; x.textAlign='right'; x.fillText(String(i+1), 58, y);
+        x.textAlign='left';
+        let cx = 100;
+        row.forEach(([txt,kind])=>{
+          x.fillStyle = COL[kind] || '#C9D6E6';
+          x.fillText(txt, cx, y);
+          cx += x.measureText(txt).width;
+        });
+        if (i === rows.length-1){ x.fillStyle='#45D6FF'; x.fillRect(cx+6, y-24, 14, 32); }
+      });
+      // scanlines
+      x.fillStyle = 'rgba(120,200,255,.035)';
+      for (let y=64; y<h; y+=4) x.fillRect(0,y,w,1);
+    });
+  }
+
+  /* holographic panel (terminal / logs) */
+  function panelTexture(title, lines, accent){
+    return tex(512, 320, (x,w,h)=>{
+      x.clearRect(0,0,w,h);
+      x.fillStyle = 'rgba(8,13,22,.92)'; roundRect(x,4,4,w-8,h-8,18); x.fill();
+      x.strokeStyle = accent; x.globalAlpha = .55; x.lineWidth = 2; x.stroke(); x.globalAlpha = 1;
+      x.fillStyle = 'rgba(140,180,235,.07)'; roundRect(x,4,4,w-8,44,18); x.fill();
+      x.font = '500 20px "JetBrains Mono", monospace'; x.fillStyle = accent;
+      x.fillText(title, 22, 33);
+      x.font = '400 19px "JetBrains Mono", monospace';
+      lines.forEach((ln,i)=>{
+        x.fillStyle = i%3===0 ? '#7EE787' : (i%3===1 ? '#C9D6E6' : '#5D6E85');
+        x.fillText(ln, 22, 82+i*30);
+      });
+      x.fillStyle = 'rgba(120,200,255,.05)';
+      for (let y=48; y<h; y+=4) x.fillRect(0,y,w,1);
+    });
+  }
+
+  function badgeTexture(name, color){
+    return tex(384, 192, (x,w,h)=>{
+      x.clearRect(0,0,w,h);
+      x.fillStyle = 'rgba(10,16,26,.9)'; roundRect(x,8,8,w-16,h-16,26); x.fill();
+      x.strokeStyle = color; x.lineWidth = 3; x.globalAlpha = .6; x.stroke(); x.globalAlpha = 1;
+      const g = x.createLinearGradient(0,0,w,h);
+      g.addColorStop(0, color+'33'); g.addColorStop(1, 'rgba(0,0,0,0)');
+      x.fillStyle = g; roundRect(x,8,8,w-16,h-16,26); x.fill();
+      x.fillStyle = color; x.beginPath(); x.arc(38, 40, 7, 0, 7); x.fill();
+      x.font = '600 34px "Space Grotesk", sans-serif';
+      x.fillStyle = '#EAF3FF'; x.textAlign='center'; x.textBaseline='middle';
+      x.fillText(name, w/2, h/2 + 8);
+    });
+  }
+
+  /* ---------- builders ---------- */
+  function buildEnvironment(){
+    const env = new THREE.Group(); env.position.z = -35; scene.add(env);
+
+    const grid = new THREE.GridHelper(240, 96, 0x1D4C73, 0x102237);
+    grid.material.transparent = true; grid.material.opacity = .32;
+    grid.position.y = -3.4; env.add(grid);
+
+    const count = TIER >= 3 ? 1400 : (TIER === 2 ? 700 : 320);
+    const pos = new Float32Array(count*3), sz = new Float32Array(count);
+    for (let i=0;i<count;i++){
+      pos[i*3]   = (Math.random()-.5)*70;
+      pos[i*3+1] = (Math.random()-.5)*26;
+      pos[i*3+2] = (Math.random()-.5)*130;
+      sz[i] = Math.random();
+    }
+    const pg = new THREE.BufferGeometry();
+    pg.setAttribute('position', new THREE.BufferAttribute(pos,3));
+    const dust = new THREE.Points(pg, new THREE.PointsMaterial({
+      size:.05, color:0x7FD4FF, transparent:true, opacity:.6,
+      blending:THREE.AdditiveBlending, depthWrite:false, sizeAttenuation:true
+    }));
+    env.add(dust); groups.dust = dust;
+
+    // far ambient geometry so the corridor is never empty
+    const shapes = new THREE.Group(); env.add(shapes);
+    const geos = [new THREE.IcosahedronGeometry(1,0), new THREE.OctahedronGeometry(1,0), new THREE.TorusGeometry(1,.28,8,24)];
+    const n = TIER >= 3 ? 12 : 6;
+    for (let i=0;i<n;i++){
+      const m = new THREE.Mesh(geos[i%3], new THREE.MeshBasicMaterial({
+        color: i%3===0 ? 0x45D6FF : (i%3===1 ? 0x9B6BFF : 0x5B7BFF),
+        wireframe:true, transparent:true, opacity:.16
+      }));
+      m.position.set((Math.random()-.5)*26, (Math.random()-.5)*10, -6 - Math.random()*42);
+      const s = .7 + Math.random()*1.8; m.scale.setScalar(s);
+      shapes.add(m);
+      floaters.push({ o:m, spin:.05+Math.random()*.12, amp:.3+Math.random()*.5, off:Math.random()*9, base:m.position.y });
+    }
+  }
+
+  function buildWorkstation(){
+    const g = new THREE.Group();
+    g.position.set(MOBILE ? 0 : 3.3, STATION_Y, MOBILE ? -5.2 : 0);
+    g.rotation.y = MOBILE ? 0 : -0.38;
+    if (MOBILE) g.scale.setScalar(.72);
+    scene.add(g); groups.station = g;
+
+    const metal = (c, rough, emis) => new THREE.MeshStandardMaterial({
+      color:c, metalness:.92, roughness:rough, emissive:emis||0x000000, emissiveIntensity:.6
+    });
+
+    // desk
+    const desk = new THREE.Mesh(new THREE.BoxGeometry(5.6,.14,2.4), metal(0x0C121C,.38));
+    desk.position.y = -1.5; desk.receiveShadow = true; g.add(desk);
+    const edge = new THREE.Mesh(new THREE.BoxGeometry(5.62,.02,2.42),
+      new THREE.MeshBasicMaterial({ color:0x45D6FF, transparent:true, opacity:.45 }));
+    edge.position.y = -1.42; g.add(edge);
+
+    // monitor
+    const mon = new THREE.Group(); mon.position.y = .25; g.add(mon);
+    const frame = new THREE.Mesh(new THREE.BoxGeometry(3.6,2.16,.1), metal(0x0A0F18,.3));
+    frame.castShadow = true; mon.add(frame);
+    const screen = new THREE.Mesh(new THREE.PlaneGeometry(3.4,1.96),
+      new THREE.MeshBasicMaterial({ map:screenTexture(), toneMapped:false }));
+    screen.position.z = .056; mon.add(screen);
+    const bloom = glowSprite('rgba(69,214,255,.55)', 6.2, .3); bloom.position.z = .3; mon.add(bloom);
+
+    const neck = new THREE.Mesh(new THREE.CylinderGeometry(.09,.11,1.0,12), metal(0x121A26,.35));
+    neck.position.y = -1.0; g.add(neck);
+    const foot = new THREE.Mesh(new THREE.CylinderGeometry(.62,.68,.06,24), metal(0x0E141F,.3));
+    foot.position.y = -1.42; g.add(foot);
+
+    // keyboard + keys
+    const kb = new THREE.Mesh(new THREE.BoxGeometry(2.1,.07,.72), metal(0x0B1119,.45));
+    kb.position.set(-.1,-1.38,1.05); kb.rotation.x = -.06; kb.castShadow = true; g.add(kb);
+    if (TIER >= 2){
+      const keyG = new THREE.BoxGeometry(.11,.03,.11);
+      const keyM = new THREE.MeshStandardMaterial({ color:0x16202E, emissive:0x1E5C7A, emissiveIntensity:.8, roughness:.6 });
+      const keys = new THREE.InstancedMesh(keyG, keyM, 60);
+      const d = new THREE.Object3D(); let i = 0;
+      for (let r=0;r<4;r++) for (let c=0;c<15;c++){
+        d.position.set(-.92+c*.132, -1.32+r*.006, .82+r*.14);
+        d.rotation.x = -.06; d.updateMatrix(); keys.setMatrixAt(i++, d.matrix);
+      }
+      g.add(keys);
+    }
+
+    // small server tower
+    const srv = new THREE.Mesh(new THREE.BoxGeometry(.72,1.5,.72), metal(0x0A1018,.34));
+    srv.position.set(2.45,-.7,-.25); srv.castShadow = true; g.add(srv);
+    for (let i=0;i<5;i++){
+      const led = new THREE.Mesh(new THREE.PlaneGeometry(.42,.035),
+        new THREE.MeshBasicMaterial({ color: i%2 ? 0x45D6FF : 0x9B6BFF, transparent:true, opacity:.85 }));
+      led.position.set(2.45,-.15-i*.2,.17); g.add(led);
+      floaters.push({ o:led, blink:1.6+i*.4, off:i });
+    }
+
+    // floating holo panels
+    if (TIER >= 2){
+      const panels = [
+        { t:'terminal — api', l:['$ uvicorn main:app --reload','INFO  Application startup','GET /api/projects 200 OK','GET /api/skills   200 OK'], c:'#45D6FF', p:[-2.75,1.05,-.35], r:.42, s:1.5 },
+        { t:'build', l:['vite build','modules  428','bundle   184 kb','ready in 1.9s'], c:'#9B6BFF', p:[2.55,1.35,-.9], r:-.5, s:1.15 },
+        { t:'devices', l:['esp32-a  online  24.6C','esp32-b  online  23.9C','ws clients   12'], c:'#3DDC97', p:[-2.5,-.55,.95], r:.55, s:1.1 }
+      ];
+      panels.forEach((cfg,i)=>{
+        const m = new THREE.Mesh(new THREE.PlaneGeometry(cfg.s, cfg.s*.625),
+          new THREE.MeshBasicMaterial({ map:panelTexture(cfg.t,cfg.l,cfg.c), transparent:true, opacity:.9, side:THREE.DoubleSide, depthWrite:false }));
+        m.position.set(cfg.p[0],cfg.p[1],cfg.p[2]); m.rotation.y = cfg.r;
+        g.add(m);
+        floaters.push({ o:m, amp:.09, spd:.55+i*.15, off:i*2, base:cfg.p[1], tiltAmp:.05 });
+      });
+    }
+
+    // rotating core object above the desk
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(.42,0),
+      new THREE.MeshBasicMaterial({ color:0x45D6FF, wireframe:true, transparent:true, opacity:.55 }));
+    core.position.set(1.95,1.75,-.2); g.add(core);
+    core.add(glowSprite('rgba(69,214,255,.6)', 1.9, .5));
+    floaters.push({ o:core, spin:.5, amp:.12, spd:.8, base:1.75 });
+
+    // data nodes orbiting
+    const nodeG = new THREE.SphereGeometry(.055,10,10);
+    for (let i=0;i<(TIER>=3?10:5);i++){
+      const nd = new THREE.Mesh(nodeG, new THREE.MeshBasicMaterial({ color:0x8FE3FF }));
+      g.add(nd);
+      floaters.push({ o:nd, orbit:{ r:2.4+Math.random()*1.4, y:-.4+Math.random()*2.2, spd:.18+Math.random()*.25, ph:Math.random()*7 } });
+    }
+    return g;
+  }
+
+  function buildBadges(){
+    const list = ['React','Next.js','Node.js','Python','Django','MySQL','Flutter','React Native','FastAPI','Three.js'];
+    const colors = ['#45D6FF','#E6EEF9','#3DDC97','#F0B67F','#3DDC97','#5B7BFF','#45D6FF','#45D6FF','#3DDC97','#9B6BFF'];
+    const g = new THREE.Group(); groups.badges = g;
+    groups.station.add(g);
+    const n = TIER >= 3 ? 10 : (TIER === 2 ? 6 : 4);
+    for (let i=0;i<n;i++){
+      const a = (i/n)*Math.PI*2;
+      const r = 4.1 + (i%2)*.7;
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(.92,.46), new THREE.MeshBasicMaterial({
+        map: badgeTexture(list[i], colors[i]), transparent:true, opacity:.92, side:THREE.DoubleSide, depthWrite:false
+      }));
+      m.position.set(Math.cos(a)*r, -.4 + Math.sin(i*1.7)*1.6, Math.sin(a)*r*.55 - .4);
+      m.userData = { kind:'badge', name:list[i], desc:'Part of my day-to-day stack.', a, r, base:m.position.y, i };
+      g.add(m); interactive.push(m);
+      floaters.push({ o:m, badge:true, a, r, base:m.position.y, off:i });
+    }
+  }
+
+  function buildConstellation(){
+    const g = new THREE.Group(); g.position.set(0,0,-30); scene.add(g); groups.skills = g;
+    g.visible = false;
+
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.15,1),
+      new THREE.MeshBasicMaterial({ color:0x45D6FF, wireframe:true, transparent:true, opacity:.4 }));
+    g.add(core); groups.core = core;
+    const inner = new THREE.Mesh(new THREE.IcosahedronGeometry(.62,1),
+      new THREE.MeshStandardMaterial({ color:0x0B1622, emissive:0x1C6E96, emissiveIntensity:1.4, metalness:.8, roughness:.25 }));
+    g.add(inner);
+    g.add(glowSprite('rgba(69,214,255,.5)', 5.4, .38));
+    const codeLabel = label('CODE', '#45D6FF', 1.5); codeLabel.position.y = 0; g.add(codeLabel);
+
+    const N = SKILLS.length;
+    const linePos = [];
+    const nodeGeo = new THREE.OctahedronGeometry(.16, 0);
+    SKILLS.forEach((sk, i)=>{
+      // fibonacci sphere placement — even distribution, no random clumping
+      const y = 1 - (i/(N-1))*2;
+      const rr = Math.sqrt(Math.max(0, 1-y*y));
+      const th = Math.PI*(3-Math.sqrt(5))*i;
+      const R = 4.6;
+      const p = new THREE.Vector3(Math.cos(th)*rr*R, y*R*.72, Math.sin(th)*rr*R);
+      const col = new THREE.Color(GROUP_COLOR[sk.g]);
+      const node = new THREE.Mesh(nodeGeo, new THREE.MeshStandardMaterial({
+        color:0x0A111B, emissive:col, emissiveIntensity:1.1, metalness:.7, roughness:.3
+      }));
+      node.position.copy(p);
+      node.userData = { kind:'skill', name:sk.n, desc:sk.d, level:sk.l, group:sk.g, color:GROUP_COLOR[sk.g], home:p.clone() };
+      g.add(node); interactive.push(node);
+
+      const lb = label(sk.n, GROUP_COLOR[sk.g], .62);
+      lb.position.copy(p).multiplyScalar(1.0); lb.position.y += .42;
+      lb.material.opacity = .82; g.add(lb);
+      node.userData.label = lb;
+
+      linePos.push(0,0,0, p.x,p.y,p.z);
+      floaters.push({ o:node, node:true, home:p.clone(), off:i*.6, lb:lb });
+    });
+    const lg = new THREE.BufferGeometry();
+    lg.setAttribute('position', new THREE.BufferAttribute(new Float32Array(linePos),3));
+    g.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({
+      color:0x2E7FA8, transparent:true, opacity:.22, blending:THREE.AdditiveBlending, depthWrite:false
+    })));
+  }
+
+  function buildLab(){
+    const g = new THREE.Group(); g.position.set(0,0,-67); scene.add(g); groups.lab = g; g.visible = false;
+    const mono = new THREE.Mesh(new THREE.BoxGeometry(5.5,8,.6),
+      new THREE.MeshBasicMaterial({ color:0x45D6FF, wireframe:true, transparent:true, opacity:.17 }));
+    g.add(mono);
+    const fill = new THREE.Mesh(new THREE.BoxGeometry(5.3,7.8,.4),
+      new THREE.MeshStandardMaterial({ color:0x070C15, metalness:.9, roughness:.25, emissive:0x0A2A3C, emissiveIntensity:.8 }));
+    g.add(fill);
+    for (let i=0;i<7;i++){
+      const bar = new THREE.Mesh(new THREE.PlaneGeometry(4.4,.045),
+        new THREE.MeshBasicMaterial({ color: i%2?0x45D6FF:0x9B6BFF, transparent:true, opacity:.5 }));
+      bar.position.set(0, 3.1-i*1.0, .33); g.add(bar);
+      floaters.push({ o:bar, scan:true, off:i*.8 });
+    }
+    [[-4.2,1.6],[4.2,-1.2],[-3.6,-2.4],[3.8,2.6]].forEach((p,i)=>{
+      const m = new THREE.Mesh(new THREE.TorusGeometry(.5,.05,8,28),
+        new THREE.MeshBasicMaterial({ color:0x45D6FF, transparent:true, opacity:.4 }));
+      m.position.set(p[0],p[1],1.5); g.add(m);
+      floaters.push({ o:m, spin:.35, amp:.25, spd:.6, base:p[1] });
+    });
+  }
+
+  function buildPortal(){
+    const g = new THREE.Group(); g.position.set(0,0,-80); scene.add(g); groups.portal = g; g.visible = false;
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(4.2,.05,10,90),
+      new THREE.MeshBasicMaterial({ color:0x45D6FF, transparent:true, opacity:.75 }));
+    g.add(ring); groups.pring = ring;
+    const ring2 = new THREE.Mesh(new THREE.TorusGeometry(4.75,.02,8,90),
+      new THREE.MeshBasicMaterial({ color:0x9B6BFF, transparent:true, opacity:.45 }));
+    g.add(ring2); groups.pring2 = ring2;
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(4.15, 64),
+      new THREE.MeshBasicMaterial({ color:0x0A1B2B, transparent:true, opacity:.5 }));
+    disc.position.z = -.4; g.add(disc);
+    g.add(glowSprite('rgba(69,214,255,.4)', 13, .3));
+    const nodeG = new THREE.SphereGeometry(.07,8,8);
+    for (let i=0;i<24;i++){
+      const a = (i/24)*Math.PI*2;
+      const m = new THREE.Mesh(nodeG, new THREE.MeshBasicMaterial({ color: i%3?0x45D6FF:0x9B6BFF }));
+      m.position.set(Math.cos(a)*4.2, Math.sin(a)*4.2, 0); g.add(m);
+    }
+  }
+
+  /* ---------- init ---------- */
+  function init(){
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: TIER >= 3, alpha:true, powerPreference:'high-performance' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, TIER >= 3 ? 2 : 1.5));
+    renderer.setSize(W(), window.innerHeight);
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.08;
+    if (TIER >= 3){ renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; }
+
+    scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x04060B, 0.028);
+    camera = new THREE.PerspectiveCamera(46, W()/window.innerHeight, .1, 200);
+    camera.position.copy(curPos);
+    clock = new THREE.Clock();
+
+    scene.add(new THREE.AmbientLight(0x2A3E57, .9));
+    const key = new THREE.DirectionalLight(0x9FD8FF, 1.35);
+    key.position.set(-5, 7, 6);
+    if (TIER >= 3){
+      key.castShadow = true;
+      key.shadow.mapSize.set(1024,1024);
+      key.shadow.bias = -0.0015;
+      const sc = key.shadow.camera;
+      sc.near = 1; sc.far = 34; sc.left = -9; sc.right = 9; sc.top = 9; sc.bottom = -9;
+      sc.updateProjectionMatrix();
+    }
+    scene.add(key);
+    const cyan = new THREE.PointLight(0x45D6FF, 1.5, 22); cyan.position.set(5, 2.2, 3); scene.add(cyan);
+    const violet = new THREE.PointLight(0x9B6BFF, 1.2, 24); violet.position.set(-5, .5, -3); scene.add(violet);
+    groups.cyan = cyan; groups.violet = violet;
+
+    buildEnvironment();
+    buildWorkstation();
+    buildBadges();
+    buildConstellation();
+    buildLab();
+    buildPortal();
+
+    window.addEventListener('resize', onResize);
+    if (!TOUCH){
+      window.addEventListener('mousemove', onMove, { passive:true });
+      window.addEventListener('pointerdown', onMove, { passive:true });
+    }
+    document.addEventListener('visibilitychange', ()=>{ running = !document.hidden; if (running) loop(); });
+    loop();
+  }
+
+  function onResize(){
+    camera.aspect = W()/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(W(), window.innerHeight);
+  }
+  function onMove(e){
+    mouse.tx = (e.clientX / W()) * 2 - 1;
+    mouse.ty = (e.clientY / window.innerHeight) * 2 - 1;
+    pointer.x = mouse.tx; pointer.y = -mouse.ty;
+  }
+
+  /* ---------- hover picking ---------- */
+  const tip = $('#tip');
+  function pick(){
+    if (!hoverEnabled || TOUCH || REDUCED){ if (hovered) clearHover(); return; }
+    ray.setFromCamera(pointer, camera);
+    const shown = o => { let n = o; while (n){ if (!n.visible) return false; n = n.parent; } return true; };
+    const list = interactive.filter(shown);
+    const hits = ray.intersectObjects(list, false);
+    const hit = hits.length ? hits[0].object : null;
+    if (hit === hovered) { if (hovered) placeTip(hovered); return; }
+    if (hovered) clearHover();
+    hovered = hit;
+    if (!hovered) { gsap.to(tip, { opacity:0, duration:.2 }); return; }
+    gsap.to(hovered.scale, { x:1.32, y:1.32, z:1.32, duration:.45, ease:'back.out(2)' });
+    if (hovered.material.emissiveIntensity !== undefined)
+      gsap.to(hovered.material, { emissiveIntensity:2.4, duration:.4 });
+    const u = hovered.userData;
+    tip.querySelector('h5').textContent = u.name;
+    tip.querySelector('h5').style.color = u.color || '#45D6FF';
+    tip.querySelector('p').textContent = u.desc;
+    const meter = tip.querySelector('.meter');
+    if (u.level){ meter.style.display = 'block'; gsap.to(meter.firstElementChild, { width:(u.level*100)+'%', duration:.6, ease:'power3.out' }); }
+    else meter.style.display = 'none';
+    placeTip(hovered);
+    gsap.to(tip, { opacity:1, duration:.25 });
+    document.body.dataset.hover3d = '1';
+  }
+  function placeTip(o){
+    const v = o.getWorldPosition(new THREE.Vector3()).project(camera);
+    tip.style.left = ((v.x*.5+.5) * W()) + 'px';
+    tip.style.top  = ((-v.y*.5+.5) * window.innerHeight) + 'px';
+  }
+  function clearHover(){
+    gsap.to(hovered.scale, { x:1, y:1, z:1, duration:.4 });
+    if (hovered.material.emissiveIntensity !== undefined)
+      gsap.to(hovered.material, { emissiveIntensity:1.1, duration:.4 });
+    hovered = null;
+    delete document.body.dataset.hover3d;
+    gsap.to(tip, { opacity:0, duration:.2 });
+  }
+
+  /* ---------- loop ---------- */
+  let acc = 0;
+  function loop(){
+    if (!running) return;
+    raf = requestAnimationFrame(loop);
+    const dt = Math.min(clock.getDelta(), .05);
+    const t = clock.elapsedTime;
+
+    // smooth mouse
+    mouse.x += (mouse.tx - mouse.x) * .06;
+    mouse.y += (mouse.ty - mouse.y) * .06;
+
+    if (!REDUCED){
+      floaters.forEach(f=>{
+        const o = f.o;
+        if (f.orbit){
+          const a = t*f.orbit.spd + f.orbit.ph;
+          o.position.set(Math.cos(a)*f.orbit.r, f.orbit.y + Math.sin(a*2)*.25, Math.sin(a)*f.orbit.r*.5 - .3);
+          return;
+        }
+        if (f.badge){
+          const a = f.a + t*.075;
+          o.position.x = Math.cos(a)*f.r;
+          o.position.z = Math.sin(a)*f.r*.55 - .4;
+          o.position.y = f.base + Math.sin(t*.7 + f.off)*.16;
+          o.lookAt(camera.position);
+          return;
+        }
+        if (f.node){
+          o.position.copy(f.home).multiplyScalar(1 + Math.sin(t*.55 + f.off)*.022);
+          o.rotation.x += dt*.5; o.rotation.y += dt*.35;
+          return;
+        }
+        if (f.blink){ o.material.opacity = .35 + Math.abs(Math.sin(t*f.blink + f.off))*.6; return; }
+        if (f.scan){ o.material.opacity = .18 + Math.abs(Math.sin(t*.6 + f.off))*.55; return; }
+        if (f.spin){ o.rotation.y += dt*f.spin; o.rotation.x += dt*f.spin*.4; }
+        if (f.amp !== undefined && f.base !== undefined) o.position.y = f.base + Math.sin(t*(f.spd||.6) + (f.off||0))*f.amp;
+        if (f.tiltAmp) o.rotation.z = Math.sin(t*.4 + f.off)*f.tiltAmp;
+      });
+
+      if (groups.dust){ groups.dust.rotation.y = t*.008; }
+      if (groups.skills.visible){ groups.skills.rotation.y = t*.045; groups.core.rotation.x = t*.18; groups.core.rotation.y = -t*.12; }
+      if (groups.portal.visible){ groups.pring.rotation.z = t*.12; groups.pring2.rotation.z = -t*.09; }
+      if (groups.lab.visible){ groups.lab.rotation.y = Math.sin(t*.15)*.06; }
+      groups.station.rotation.y = (MOBILE ? 0 : -0.38) + Math.sin(t*.22)*.045 + mouse.x*.06;
+      groups.station.position.y = STATION_Y + Math.sin(t*.42)*.06;
+      groups.cyan.position.x = 5 + mouse.x*2.2;
+      groups.cyan.position.y = 2.2 - mouse.y*1.4;
+      groups.violet.position.x = -5 - mouse.x*1.6;
+    }
+
+    // camera: eased travel + gentle parallax
+    const px = REDUCED ? 0 : mouse.x * .55, py = REDUCED ? 0 : -mouse.y * .32;
+    curPos.lerp(camPos, REDUCED ? 1 : .035);
+    curLook.lerp(camLook, REDUCED ? 1 : .05);
+    camera.position.set(curPos.x + px, curPos.y + py, curPos.z);
+    camera.lookAt(curLook.x + px*.35, curLook.y + py*.35, curLook.z);
+
+    acc += dt;
+    if (acc > 1/30){ acc = 0; pick(); }
+    renderer.render(scene, camera);
+  }
+
+  /* ---------- public ---------- */
+  function goto(key){
+    const w = WAY[key] || WAY.deep;
+    camPos = w.p; camLook = w.l;
+    groups.skills.visible = (key === 'skills');
+    groups.lab.visible    = (key === 'lab' || key === 'portal');
+    groups.portal.visible = (key === 'portal' || key === 'lab');
+    groups.station.visible = (key === 'hero' || key === 'about');
+    hoverEnabled = (key === 'hero' || key === 'about' || key === 'skills');
+    if (!hoverEnabled && hovered) clearHover();
+  }
+  function portalBurst(){
+    if (REDUCED || !groups.portal.visible) return;
+    gsap.fromTo(groups.pring.scale, { x:1,y:1,z:1 }, { x:1.16,y:1.16,z:1.16, duration:.5, yoyo:true, repeat:1, ease:'power2.out' });
+    gsap.fromTo(groups.pring.material, { opacity:.75 }, { opacity:1, duration:.4, yoyo:true, repeat:1 });
+  }
+  return { init, goto, portalBurst, supported: !!window.WebGLRenderingContext };
+})();
+
+/* ==========================================================================
+   DOM RENDERING
+   ========================================================================== */
+function renderChips(){
+  $('#herochips').innerHTML = HERO_CHIPS.map(c=>`<span class="chip">${c}</span>`).join('');
+  $('#nowchips').innerHTML = ['AI','Python','FastAPI','WebSockets','ESP32','Three.js']
+    .map(c=>`<span class="chip on">${c}</span>`).join('');
+}
+
+function renderStats(){
+  $('#stats').innerHTML = STATS.map(s=>`
+    <div class="glass stat tilt" data-reveal data-cursor="dot">
+      <div class="n" data-count="${s.n||0}" data-suffix="${s.suffix||''}">${s.text||'0'}</div>
+      <div class="l">${s.label}</div>
+    </div>`).join('');
+}
+
+function renderSkillLegend(){
+  $('#skilllegend').innerHTML = Object.keys(GROUP_COLOR).map(g=>
+    `<span class="chip" style="border-color:${GROUP_COLOR[g]}44;color:${GROUP_COLOR[g]}">${g}</span>`).join('');
+}
+
+function renderProjects(){
+  $('#projectgrid').innerHTML = PROJECTS.map(p=>`
+    <article class="glass pcard tilt" data-reveal data-project="${p.id}" data-cursor="EXPLORE" tabindex="0" role="button" aria-label="Open ${p.name}">
+      <div class="mock">${mockup(p.mock)}</div>
+      <div class="num mt-5">PROJECT ${p.num} · ${p.tag}</div>
+      <h3>${p.name}</h3>
+      <p class="desc">${p.desc}</p>
+      <div class="flex flex-wrap gap-2 mt-4">${p.stack.slice(0,4).map(s=>`<span class="chip">${s}</span>`).join('')}</div>
+      <div class="flex gap-3 mt-6">
+        <span class="btn" style="padding:.6rem 1rem;font-size:.82rem">Explore →</span>
+        <span class="btn" style="padding:.6rem 1rem;font-size:.82rem">GitHub</span>
+      </div>
+      <i class="glowline"></i>
+    </article>`).join('');
+}
+
+function renderTimeline(){
+  $('#timeline').innerHTML = TIMELINE.map((n,i)=>`
+    <div class="tnode ${i===0?'on':''}" data-t="${i}" data-cursor="OPEN" tabindex="0" role="button" aria-expanded="${i===0}">
+      <i class="rail"></i><i class="bulb"></i>
+      <div class="yr">${n.yr}</div>
+      <h3 class="mt-1">${n.t}</h3>
+      <div style="color:var(--slate);font-size:.88rem;margin-top:.2rem">${n.s}</div>
+      <div class="tbody" style="height:${i===0?'auto':'0'}">
+        <div style="padding-top:.9rem">
+          <p style="color:var(--slate);font-size:.9rem;line-height:1.7;max-width:34rem">${n.b}</p>
+          <div class="flex flex-wrap gap-2 mt-4">${n.tech.map(t=>`<span class="chip">${t}</span>`).join('')}</div>
+          <div class="flex gap-2 mt-4" style="font-size:.84rem;color:var(--ice)">
+            <span style="color:var(--cyan)">✦</span><span>${n.win}</span>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+/* small 3D-ish service artwork, CSS only */
+function serviceArt(kind){
+  const base = 'position:absolute;inset:0;display:grid;place-items:center';
+  if (kind === 'web') return `<div style="${base}"><div class="svc3d" style="width:150px;height:96px;border-radius:9px;border:1px solid var(--stroke-2);background:linear-gradient(150deg,rgba(69,214,255,.14),rgba(10,16,26,.9));box-shadow:0 20px 40px -22px rgba(69,214,255,.7)">
+    <div style="display:flex;gap:4px;padding:8px 9px;border-bottom:1px solid var(--stroke)"><i style="width:6px;height:6px;border-radius:50%;background:#FF6058"></i><i style="width:6px;height:6px;border-radius:50%;background:#FFBD2E"></i><i style="width:6px;height:6px;border-radius:50%;background:#28CA42"></i></div>
+    <div style="padding:10px 9px;display:grid;gap:6px"><i style="height:5px;width:70%;background:rgba(143,182,224,.5);border-radius:3px;display:block"></i><i style="height:5px;width:45%;background:rgba(143,182,224,.28);border-radius:3px;display:block"></i><i style="height:14px;width:38%;background:linear-gradient(90deg,#45D6FF,#5B7BFF);border-radius:4px;display:block"></i></div></div></div>`;
+  if (kind === 'api') return `<div style="${base}"><svg width="160" height="104" viewBox="0 0 160 104" class="svc3d" aria-hidden="true">
+    <g stroke="#45D6FF" stroke-opacity=".45" fill="none"><path d="M80 52 L26 22M80 52 L134 22M80 52 L26 82M80 52 L134 82M26 22 L26 82M134 22 L134 82"/></g>
+    <circle cx="80" cy="52" r="13" fill="#0A111B" stroke="#45D6FF"/><text x="80" y="56" font-size="9" fill="#45D6FF" font-family="monospace" text-anchor="middle">API</text>
+    ${[[26,22],[134,22],[26,82],[134,82]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="7" fill="#0A111B" stroke="#9B6BFF"/>`).join('')}</svg></div>`;
+  if (kind === 'mobile') return `<div style="${base}"><div class="svc3d" style="width:60px;height:104px;border-radius:13px;border:1px solid var(--stroke-2);background:linear-gradient(160deg,rgba(61,220,151,.16),rgba(10,16,26,.92));box-shadow:0 20px 40px -22px rgba(61,220,151,.6);padding:10px 8px;display:grid;gap:6px;align-content:start">
+    <i style="height:4px;width:22px;background:rgba(143,182,224,.4);border-radius:2px;margin:0 auto 4px"></i>
+    <i style="height:22px;background:linear-gradient(120deg,rgba(69,214,255,.35),transparent);border-radius:5px;display:block"></i>
+    <i style="height:10px;background:rgba(143,182,224,.18);border-radius:4px;display:block"></i>
+    <i style="height:10px;background:rgba(143,182,224,.12);border-radius:4px;display:block"></i></div></div>`;
+  if (kind === 'saas') return `<div style="${base}"><div class="svc3d" style="position:relative;width:150px;height:100px">
+    <div style="position:absolute;inset:auto 0 0 0;height:56px;border-radius:9px;border:1px solid var(--stroke-2);background:rgba(10,16,26,.9);display:grid;gap:5px;padding:9px">
+      ${[60,40,80].map(w=>`<i style="height:5px;width:${w}%;background:rgba(91,123,255,.45);border-radius:3px;display:block"></i>`).join('')}</div>
+    <div style="position:absolute;top:0;left:22px;width:106px;height:44px;border-radius:22px;border:1px solid rgba(91,123,255,.5);background:linear-gradient(120deg,rgba(91,123,255,.2),rgba(155,107,255,.14));box-shadow:0 16px 34px -18px rgba(91,123,255,.9)"></div></div></div>`;
+  return `<div style="${base}"><svg width="164" height="104" viewBox="0 0 164 104" class="svc3d" aria-hidden="true">
+    <g stroke="#F0B67F" stroke-opacity=".4" fill="none" stroke-dasharray="3 4"><path d="M82 78 L30 40M82 78 L82 28M82 78 L134 40"/></g>
+    <rect x="62" y="76" width="40" height="22" rx="6" fill="#0A111B" stroke="#F0B67F"/>
+    ${[[30,40],[82,28],[134,40]].map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="9" fill="#0A111B" stroke="#45D6FF"/><circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#45D6FF"><animate attributeName="opacity" values="1;.25;1" dur="${2+i*.6}s" repeatCount="indefinite"/></circle>`).join('')}</svg></div>`;
+}
+
+function renderServices(){
+  $('#servicegrid').innerHTML = SERVICES.map(s=>`
+    <div class="glass svc tilt" data-reveal data-cursor="dot">
+      <div class="art">${serviceArt(s.k)}</div>
+      <h3>${s.t}</h3><p>${s.d}</p>
+    </div>`).join('');
+}
+
+function renderLab(){
+  const keys = Object.keys(LAB);
+  $('#termtabs').innerHTML = keys.map((k,i)=>`<button class="ttab ${i===0?'on':''}" data-tab="${k}">${k}</button>`).join('');
+}
+
+function renderAvatar(){
+  $('#avatar').innerHTML = `<svg viewBox="0 0 74 74" width="74" height="74" aria-hidden="true">
+    <defs><linearGradient id="av" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#45D6FF"/><stop offset="1" stop-color="#9B6BFF"/></linearGradient></defs>
+    <circle cx="37" cy="26" r="11" fill="none" stroke="url(#av)" stroke-width="1.4"/>
+    <path d="M14 66c0-13 10-21 23-21s23 8 23 21" fill="none" stroke="url(#av)" stroke-width="1.4"/>
+    <g stroke="#45D6FF" stroke-width="1" opacity=".55">
+      <path d="M24 26h-9M59 26h-9M37 37v8"><animate attributeName="opacity" values=".2;.8;.2" dur="3s" repeatCount="indefinite"/></path></g>
+    <circle cx="15" cy="26" r="2" fill="#45D6FF"/><circle cx="59" cy="26" r="2" fill="#9B6BFF"/>
+  </svg>`;
+}
+
+function renderAssembly(){
+  $('#assembly').innerHTML = `<svg viewBox="0 0 420 260" width="100%" height="100%" aria-label="A machine assembling components" role="img">
+    <defs><linearGradient id="as" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#45D6FF"/><stop offset="1" stop-color="#9B6BFF"/></linearGradient></defs>
+    <rect x="30" y="186" width="360" height="8" rx="4" fill="#16202E"/>
+    <g stroke="#1F2D42" stroke-width="1">${[0,1,2,3,4,5,6,7,8,9,10,11].map(i=>`<line x1="${38+i*32}" y1="186" x2="${38+i*32}" y2="194"/>`).join('')}</g>
+    <g id="asm-parts">
+      ${[0,1,2].map(i=>`<rect class="apart" x="${40+i*120}" y="166" width="20" height="20" rx="4" fill="#0E1826" stroke="#45D6FF"/>`).join('')}
+    </g>
+    <g id="asm-arm">
+      <line x1="210" y1="40" x2="210" y2="96" stroke="#2A3B52" stroke-width="5" stroke-linecap="round"/>
+      <line id="arm2" x1="210" y1="96" x2="258" y2="134" stroke="url(#as)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="210" cy="96" r="7" fill="#0A111B" stroke="#45D6FF"/>
+      <circle id="grip" cx="258" cy="134" r="6" fill="#0A111B" stroke="#9B6BFF"/>
+    </g>
+    <g id="asm-core">
+      <rect x="176" y="120" width="68" height="60" rx="8" fill="#0A111B" stroke="#45D6FF" stroke-opacity=".6"/>
+      <rect id="fillbar" x="184" y="166" width="52" height="6" rx="3" fill="url(#as)"/>
+      <text x="210" y="146" font-family="monospace" font-size="11" fill="#45D6FF" text-anchor="middle">AI+IoT</text>
+    </g>
+    <g stroke="#45D6FF" stroke-opacity=".25" fill="none">
+      <circle id="ring1" cx="210" cy="150" r="86" stroke-dasharray="2 14"/><circle id="ring2" cx="210" cy="150" r="104" stroke-dasharray="4 10"/>
+    </g>
+    <rect x="30" y="20" width="96" height="20" rx="10" fill="#0A111B" stroke="#1F2D42"/>
+    <circle cx="44" cy="30" r="4" fill="#3DDC97"><animate attributeName="opacity" values="1;.2;1" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="56" y="34" font-family="monospace" font-size="9" fill="#8496AE">ASSEMBLING</text>
+  </svg>`;
+  if (REDUCED) return;
+  gsap.to('#ring1', { rotation:360, transformOrigin:'210px 150px', duration:26, repeat:-1, ease:'none' });
+  gsap.to('#ring2', { rotation:-360, transformOrigin:'210px 150px', duration:38, repeat:-1, ease:'none' });
+  gsap.timeline({ repeat:-1 })
+    .to('#arm2', { attr:{ x2:190, y2:150 }, duration:1.1, ease:'power2.inOut' }, 0)
+    .to('#grip', { attr:{ cx:190, cy:150 }, duration:1.1, ease:'power2.inOut' }, 0)
+    .to('#arm2', { attr:{ x2:258, y2:134 }, duration:1.1, ease:'power2.inOut' }, 1.5)
+    .to('#grip', { attr:{ cx:258, cy:134 }, duration:1.1, ease:'power2.inOut' }, 1.5);
+  gsap.to('.apart', { x:-360, duration:11, repeat:-1, ease:'none', stagger:1.4,
+    modifiers:{ x: gsap.utils.unitize(v => ((v % 360) + 360) % 360 - 360) } });
+  gsap.fromTo('#fillbar', { attr:{ width:6 } }, { attr:{ width:52 }, duration:3.4, repeat:-1, ease:'power1.inOut', yoyo:true });
+}
+
+/* ==========================================================================
+   INTERACTIONS
+   ========================================================================== */
+
+/* ---------- navigation ---------- */
+function initNav(){
+  const nav = $('#nav'), pill = $('#navpill');
+  const links = $$('.navlink');
+  const set = id => {
+    links.forEach(a=>{
+      const on = a.getAttribute('href') === '#'+id;
+      a.classList.toggle('active', on);
+      if (on){
+        gsap.to(pill, { x:a.offsetLeft, width:a.offsetWidth, opacity:1, duration:.45, ease:'power3.out' });
+      }
+    });
+  };
+  window.__setNav = set;
+  const stick = ()=>nav.classList.toggle('stuck', window.scrollY > 60);
+  window.addEventListener('scroll', stick, { passive:true }); stick();
+
+  const burger = $('#burger'), menu = $('#mobilemenu');
+  let open = false;
+  const toggle = force => {
+    open = force === undefined ? !open : force;
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    menu.classList.toggle('open', open);
+    document.body.classList.toggle('locked', open);
+    gsap.to(menu, { clipPath: open ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)', duration:.6, ease:'power4.inOut' });
+    if (open) gsap.fromTo(menu.children, { y:26, opacity:0 }, { y:0, opacity:1, duration:.5, stagger:.05, delay:.15, ease:'power3.out' });
+  };
+  burger.addEventListener('click', ()=>toggle());
+  $$('#mobilemenu a').forEach(a=>a.addEventListener('click', ()=>toggle(false)));
+  window.addEventListener('keydown', e=>{ if (e.key === 'Escape' && open) toggle(false); });
+}
+
+/* ---------- scroll progress ---------- */
+function initProgress(){
+  const bar = $('#progress');
+  const upd = ()=>{
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? clamp(window.scrollY / h, 0, 1) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', upd, { passive:true });
+  window.addEventListener('resize', upd);
+  upd();
+}
+
+/* ---------- custom cursor ---------- */
+function initCursor(){
+  if (TOUCH || REDUCED) return;
+  const dot = $('#dot'), ring = $('#ring');
+  const dx = gsap.quickTo(dot, 'x', { duration:.12, ease:'power3' });
+  const dy = gsap.quickTo(dot, 'y', { duration:.12, ease:'power3' });
+  const rx = gsap.quickTo(ring, 'x', { duration:.42, ease:'power3' });
+  const ry = gsap.quickTo(ring, 'y', { duration:.42, ease:'power3' });
+  window.addEventListener('mousemove', e=>{ dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY); }, { passive:true });
+
+  const enter = el => {
+    const v = el.getAttribute('data-cursor');
+    if (v === 'dot'){ ring.textContent=''; gsap.to(ring, { scale:.5, opacity:.5, duration:.35, ease:'power3.out' }); }
+    else { ring.textContent = v; gsap.to(ring, { scale:1, opacity:1, duration:.4, ease:'back.out(1.7)' }); }
+    gsap.to(dot, { scale:.3, duration:.3 });
+  };
+  const leave = ()=>{ gsap.to(ring, { scale:0, opacity:0, duration:.3 }); gsap.to(dot, { scale:1, duration:.3 }); };
+  document.addEventListener('mouseover', e=>{ const t = e.target.closest('[data-cursor]'); if (t) enter(t); });
+  document.addEventListener('mouseout',  e=>{ if (e.target.closest('[data-cursor]')) leave(); });
+
+  // 3D objects get the same affordance
+  const obs = new MutationObserver(()=>{
+    if (document.body.dataset.hover3d){ ring.textContent = 'INSPECT'; gsap.to(ring, { scale:1, opacity:1, duration:.35 }); }
+    else leave();
+  });
+  obs.observe(document.body, { attributes:true, attributeFilter:['data-hover3d'] });
+}
+
+/* ---------- magnetic buttons + tilt cards ---------- */
+function initMicro(){
+  if (TOUCH || REDUCED) return;
+  $$('.magnetic').forEach(el=>{
+    const x = gsap.quickTo(el, 'x', { duration:.5, ease:'power3' });
+    const y = gsap.quickTo(el, 'y', { duration:.5, ease:'power3' });
+    el.addEventListener('mousemove', e=>{
+      const r = el.getBoundingClientRect();
+      x(clamp((e.clientX - r.left - r.width/2) * .3, -14, 14));
+      y(clamp((e.clientY - r.top - r.height/2) * .4, -10, 10));
+    });
+    el.addEventListener('mouseleave', ()=>{ x(0); y(0); });
+  });
+  $$('.tilt').forEach(el=>{
+    el.addEventListener('mousemove', e=>{
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
+      el.style.transform = `perspective(1000px) rotateY(${px*7}deg) rotateX(${-py*7}deg) translateZ(14px)`;
+    });
+    el.addEventListener('mouseleave', ()=>{ el.style.transform = ''; });
+  });
+}
+
+/* ---------- reveals + counters ---------- */
+function initReveal(){
+  if (REDUCED){ gsap.set('[data-reveal]', { opacity:1, y:0 }); }
+  else {
+    $$('[data-reveal]').forEach(el=>{
+      gsap.fromTo(el, { opacity:0, y:26 }, {
+        opacity:1, y:0, duration:.9, ease:'power3.out',
+        scrollTrigger:{ trigger:el, start:'top 88%', once:true }
+      });
+    });
+  }
+  $$('[data-count]').forEach(el=>{
+    const target = +el.dataset.count;
+    if (!target) return;
+    const suffix = el.dataset.suffix || '';
+    if (REDUCED){ el.textContent = target + suffix; return; }
+    el.textContent = '0' + suffix;
+    ScrollTrigger.create({ trigger:el, start:'top 90%', once:true, onEnter:()=>{
+      if (REDUCED){ el.textContent = target + suffix; return; }
+      const o = { v:0 };
+      gsap.to(o, { v:target, duration:1.8, ease:'power2.out',
+        onUpdate:()=>{ el.textContent = Math.round(o.v) + suffix; },
+        onComplete:()=>{ el.textContent = target + suffix; } });
+    }});
+  });
+}
+
+/* ---------- timeline accordion ---------- */
+function initTimeline(){
+  const nodes = $$('.tnode');
+  const open = node => {
+    const body = $('.tbody', node);
+    const already = node.classList.contains('on');
+    nodes.forEach(n=>{
+      n.classList.remove('on'); n.setAttribute('aria-expanded','false');
+      gsap.to($('.tbody', n), { height:0, duration:.45, ease:'power3.inOut' });
+    });
+    if (already) return;
+    node.classList.add('on'); node.setAttribute('aria-expanded','true');
+    gsap.set(body, { height:'auto' });
+    gsap.from(body, { height:0, duration:.55, ease:'power3.inOut' });
+  };
+  nodes.forEach(n=>{
+    n.addEventListener('click', ()=>open(n));
+    n.addEventListener('keydown', e=>{ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(n); } });
+  });
+  gsap.set($('.tbody', nodes[0]), { height:'auto' });
+}
+
+/* ---------- code lab ---------- */
+function initLab(){
+  const out = $('#termcode'), file = $('#termfile');
+  let timer = null;
+  const play = key => {
+    const { code, file:fname } = LAB[key];
+    file.textContent = fname;
+    clearInterval(timer);
+    if (REDUCED){ out.innerHTML = highlight(code); return; }
+    let i = 0;
+    out.innerHTML = '';
+    timer = setInterval(()=>{
+      i += 1;
+      out.innerHTML = highlight(code.slice(0, i));
+      if (i >= code.length) clearInterval(timer);
+    }, 16);
+  };
+  $$('.ttab').forEach(b=>b.addEventListener('click', ()=>{
+    $$('.ttab').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); play(b.dataset.tab);
+  }));
+  if (REDUCED) play('Python');
+  else ScrollTrigger.create({ trigger:'#codelab', start:'top 70%', once:true, onEnter:()=>play('Python') });
+}
+
+/* ---------- project detail ---------- */
+function initDetail(){
+  const overlay = $('#detail'), inner = $('#detailinner');
+  let lastFocus = null;
+
+  const build = p => `
+    <div class="glass p-6 sm:p-10" id="dpanel">
+      <div class="num" style="font-family:'JetBrains Mono';font-size:.7rem;color:var(--cyan);letter-spacing:.14em">PROJECT ${p.num} · ${p.tag}</div>
+      <h2 style="font-size:clamp(2rem,5vw,3.2rem);font-weight:600;margin-top:.6rem">${p.name}</h2>
+      <p style="color:var(--slate);font-size:1rem;line-height:1.75;max-width:42rem;margin-top:1rem">${p.desc}</p>
+      <div class="flex flex-wrap gap-3 mt-7">
+        <a class="btn btn-primary magnetic" href="#" data-cursor="OPEN">Live Demo →</a>
+        <a class="btn magnetic" href="https://github.com/" target="_blank" rel="noopener" data-cursor="OPEN">GitHub</a>
+      </div>
+      <div class="mt-9" style="border-radius:14px;overflow:hidden;border:1px solid var(--stroke)">${mockup(p.mock)}</div>
+      <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-10 mt-10">
+        <div>
+          <div class="spec"><b>PROBLEM</b><span>${p.problem}</span></div>
+          <div class="spec"><b>SOLUTION</b><span>${p.solution}</span></div>
+          <div class="spec"><b>ARCHITECTURE</b><span>${p.architecture}</span></div>
+          <div class="spec" style="border-bottom:none"><b>WHAT IT WON</b><span>${p.highlight}</span></div>
+        </div>
+        <div>
+          <div style="font-family:'JetBrains Mono';font-size:.68rem;letter-spacing:.14em;color:var(--cyan)">TECHNOLOGY</div>
+          <div class="flex flex-wrap gap-2 mt-3">${p.stack.map(s=>`<span class="chip on">${s}</span>`).join('')}</div>
+          <div style="font-family:'JetBrains Mono';font-size:.68rem;letter-spacing:.14em;color:var(--cyan);margin-top:2rem">FEATURES</div>
+          <ul style="list-style:none;padding:0;margin:.8rem 0 0;display:grid;gap:.55rem">
+            ${p.features.map(f=>`<li style="font-size:.9rem;display:flex;gap:.6rem"><span style="color:var(--cyan)">·</span>${f}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 mt-10">
+        <div style="border-radius:13px;overflow:hidden;border:1px solid var(--stroke)">${mockup(p.mock)}</div>
+        <div style="border-radius:13px;overflow:hidden;border:1px solid var(--stroke)">${mockup(p.mock === 'dash' ? 'shop' : 'dash')}</div>
+      </div>
+    </div>`;
+
+  const open = (id, card) => {
+    const p = PROJECTS.find(x=>x.id === id); if (!p) return;
+    lastFocus = document.activeElement;
+    inner.innerHTML = build(p);
+    overlay.classList.add('open');
+    document.body.classList.add('locked');
+    $('#dclose').focus();
+    if (REDUCED) return;
+    const r = card.getBoundingClientRect();
+    const panel = $('#dpanel');
+    gsap.fromTo(overlay, { opacity:0 }, { opacity:1, duration:.35, ease:'power2.out' });
+    gsap.fromTo(panel,
+      { x: r.left + r.width/2 - window.innerWidth/2, y: r.top - 90, scale: Math.max(.45, r.width/window.innerWidth), opacity:.2, rotateX:8 },
+      { x:0, y:0, scale:1, opacity:1, rotateX:0, duration:.85, ease:'power4.out' });
+    gsap.from('#dpanel .spec', { y:18, opacity:0, duration:.6, stagger:.07, delay:.3, ease:'power3.out' });
+  };
+  const close = ()=>{
+    const done = ()=>{ overlay.classList.remove('open'); document.body.classList.remove('locked'); inner.innerHTML=''; if (lastFocus) lastFocus.focus(); };
+    if (REDUCED) return done();
+    gsap.to(overlay, { opacity:0, duration:.35, ease:'power2.in', onComplete:done });
+  };
+
+  document.addEventListener('click', e=>{
+    const card = e.target.closest('[data-project]');
+    if (card) open(card.dataset.project, card);
+  });
+  document.addEventListener('keydown', e=>{
+    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+    const card = e.target.closest && e.target.closest('[data-project]');
+    if (card && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); open(card.dataset.project, card); }
+  });
+  $('#dclose').addEventListener('click', close);
+  overlay.addEventListener('click', e=>{ if (e.target === overlay) close(); });
+}
+
+/* ---------- contact form + particle stream ---------- */
+function initForm(){
+  const fx = $('#fx'), ctx = fx.getContext && fx.getContext('2d');
+  const size = ()=>{ fx.width = W(); fx.height = window.innerHeight; };
+  size(); window.addEventListener('resize', size);
+  let parts = [], anim = 0;
+
+  function burst(from, to){
+    if (!ctx) return;
+    const n = LOWPOW ? 70 : 170;
+    for (let i=0;i<n;i++){
+      parts.push({
+        x: from.x + (Math.random()-.5)*from.w, y: from.y + (Math.random()-.5)*from.h,
+        tx: to.x + (Math.random()-.5)*70, ty: to.y + (Math.random()-.5)*70,
+        p: 0, sp: .008 + Math.random()*.018, r: .8 + Math.random()*1.8,
+        c: Math.random() > .55 ? '155,107,255' : '69,214,255'
+      });
+    }
+    if (!anim) anim = requestAnimationFrame(tick);
+  }
+  function tick(){
+    ctx.clearRect(0,0,fx.width,fx.height);
+    let alive = false;
+    parts.forEach(p=>{
+      p.p += p.sp;
+      if (p.p >= 1) return;
+      alive = true;
+      const e = 1 - Math.pow(1-p.p, 3);
+      const x = p.x + (p.tx - p.x)*e;
+      const y = p.y + (p.ty - p.y)*e - Math.sin(p.p*Math.PI)*60;
+      const a = Math.sin(p.p*Math.PI);
+      ctx.fillStyle = `rgba(${p.c},${a*.9})`;
+      ctx.beginPath(); ctx.arc(x, y, p.r*(1-p.p*.5), 0, 7); ctx.fill();
+    });
+    if (alive) anim = requestAnimationFrame(tick);
+    else { anim = 0; parts = []; ctx.clearRect(0,0,fx.width,fx.height); }
+  }
+
+  const form = $('#contactform'), note = $('#formnote'), done = $('#formdone');
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const name = $('#f-name').value.trim(), email = $('#f-email').value.trim(), msg = $('#f-msg').value.trim();
+    if (!name || !email || !msg || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+      note.textContent = 'Add your name, a valid email and a message, then send again.';
+      note.style.color = '#FF7BA8';
+      gsap.fromTo(form, { x:-7 }, { x:0, duration:.5, ease:'elastic.out(1,.35)' });
+      return;
+    }
+    const r = form.getBoundingClientRect();
+    if (!REDUCED){
+      burst({ x:r.left + r.width/2, y:r.top + r.height/2, w:r.width*.8, h:r.height*.7 },
+            { x: W()/2, y: window.innerHeight*.45 });
+      World.portalBurst();
+      gsap.to(form, { opacity:0, y:-18, duration:.5, ease:'power2.in', onComplete:()=>{
+        form.style.display = 'none'; done.style.display = 'block';
+        gsap.fromTo(done, { opacity:0, y:14 }, { opacity:1, y:0, duration:.6, ease:'power3.out' });
+      }});
+    } else { form.style.display='none'; done.style.display='block'; }
+  });
+  $('#formreset').addEventListener('click', ()=>{
+    form.reset(); done.style.display='none'; form.style.display='block';
+    note.textContent = 'Replies usually within a day.'; note.style.color = '';
+    gsap.fromTo(form, { opacity:0, y:14 }, { opacity:1, y:0, duration:.5 });
+  });
+}
+
+/* ---------- camera stages ---------- */
+function initStages(){
+  $$('[data-cam]').forEach(sec=>{
+    ScrollTrigger.create({
+      trigger: sec, start:'top 55%', end:'bottom 45%',
+      onEnter:     ()=>{ World.goto(sec.dataset.cam); window.__setNav(sec.id); },
+      onEnterBack: ()=>{ World.goto(sec.dataset.cam); window.__setNav(sec.id); }
+    });
+  });
+}
+
+/* ---------- loader + intro ---------- */
+function boot(){
+  const loader = $('#loader'), ltext = $('#ltext'), lbar = $('#lbar');
+  const tl = gsap.timeline();
+  tl.to(lbar, { width:'48%', duration:.65, ease:'power2.out' })
+    .call(()=>{ ltext.textContent = 'LOADING DIGITAL WORKSPACE...'; })
+    .to(lbar, { width:'100%', duration:.7, ease:'power2.inOut' })
+    .to(loader, { opacity:0, duration:.5, ease:'power2.inOut', onComplete:()=>{ loader.style.display = 'none'; } })
+    .add(()=>{
+      if (REDUCED){ gsap.set('[data-hero]', { opacity:1, y:0 }); return; }
+      gsap.fromTo('[data-hero]', { opacity:0, y:30 },
+        { opacity:1, y:0, duration:1, stagger:.09, ease:'power3.out' });
+    }, '-=.2');
+}
+
+/* ==========================================================================
+   START
+   ========================================================================== */
+function start(){
+  renderChips(); renderStats(); renderSkillLegend(); renderProjects();
+  renderTimeline(); renderServices(); renderLab(); renderAvatar(); renderAssembly();
+
+  if (!REDUCED) gsap.set('[data-hero]', { opacity:0 });
+
+  initNav(); initProgress(); initCursor(); initMicro();
+  initReveal(); initTimeline(); initLab(); initDetail(); initForm();
+
+  try {
+    if (World.supported) World.init();
+  } catch (err){
+    console.warn('3D scene unavailable:', err);
+    $('#world').style.display = 'none';
+    document.body.style.background =
+      'radial-gradient(90% 60% at 70% 10%, rgba(69,214,255,.10), transparent 60%), radial-gradient(70% 50% at 10% 70%, rgba(155,107,255,.09), transparent 60%), #04060B';
+  }
+
+  initStages();
+  ScrollTrigger.refresh();
+  window.__setNav('home');
+  boot();
+
+  window.addEventListener('load', ()=>ScrollTrigger.refresh());
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+else start();
+
+})();
+</script>
+</body>
+</html>
